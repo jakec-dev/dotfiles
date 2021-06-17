@@ -35,7 +35,7 @@ alias sudo="sudo -v; sudo "
 # terminal prompt
 PS1='\W > '
 
-# configshortcuts
+# config shortcuts
 alias i3config="vim $XDG_CONFIG_HOME/i3/config"
 alias pbconfig="vim $XDG_CONFIG_HOME/polybar/config"
 
@@ -45,7 +45,7 @@ alias bluetooth="bluetoothctl"
 alias wallpaper="nitrogen"
 alias news="newsboat"
 alias weather="curl wttr.in/'Gold Coast, Australia'"
-alias lf="$XDG_CONFIG_HOME/lf/lfrun"
+alias lf="$SCRIPTS_HOME/lf/lfrun"
 
 # completion for kitty terminal
 source <(kitty + complete setup bash)

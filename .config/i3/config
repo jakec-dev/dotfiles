@@ -105,6 +105,7 @@ for_window [title="^pulsemixer$" class="^kitty$"] floating enable
 
 # other app shortcuts
 bindsym $mod+b exec firefox
+bindsym $mod+p exec keepassxc
 bindsym $mod+q exec rofi -show calc -modi calc -no-show-match -no-sort -display-calc "" 
 
 # Define names for default workspaces for which we configure key bindings later on.

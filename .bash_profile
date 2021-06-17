@@ -13,11 +13,15 @@ XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME
 XDG_CONFIG_HOME="$HOME/.config"
 
+# Other directories
+export SCRIPTS_HOME
+SCRIPTS_HOME="$HOME/.scripts"
+
 # Disable files
 export LESSHISTFILE
 LESSHISTFILE=-
 
-# Default Apps
+# Default apps
 export EDITOR="vim"
 export VISUAL="vim"
 export TERMINAL="kitty"
