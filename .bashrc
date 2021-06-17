@@ -17,6 +17,8 @@ fi
 alias ls='ls --color=auto --group-directories-first -N'
 alias c="clear"
 alias q="exit"
+
+# cd + ls in one command
 cl() {
     local dir="$1"
     local dir="${dir:=$HOME}"
