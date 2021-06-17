@@ -24,7 +24,7 @@ warning_fg_color="#ffb86c"
 python_cmd=python3
 
 module_dir=${SCRIPTS_HOME}/polybar/news
-module_obj_dir=${module_dir}/obj
+module_obj_dir=${XDG_CACHE_HOME}/polybar-news
 
 feed_file=${module_obj_dir}/news.items
 feeds=${XDG_CONFIG_HOME}/newsboat/urls
