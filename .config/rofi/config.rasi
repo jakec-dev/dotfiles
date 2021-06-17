@@ -1,0 +1,3 @@
+configuration {
+	theme: "/home/jake/.config/rofi/themes/dracula-theme.rasi";
+}
