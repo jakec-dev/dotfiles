@@ -221,8 +221,8 @@ bindsym $mod+x [class="^scratchpadLf$"] scratchpad show
 bindsym $mod+z [class="^scratchpadTerm$"] scratchpad show
 
 # launch apps
-exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
+exec_always --no-startup-id $SCRIPTS_HOME/polybar/launch.sh
 exec_always --no-startup-id picom --experimental-backends
 
 # load layout
-exec --no-startup-id $XDG_CONFIG_HOME/i3/load_layout.sh
+exec --no-startup-id $SCRIPTS_HOME/i3/load_layout.sh
