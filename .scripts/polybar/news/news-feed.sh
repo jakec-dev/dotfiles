@@ -6,15 +6,8 @@
 show_site="no"  # display the name of the news source
 use_colors="yes"  # for error/warning
 
-show_menu="yes"  # show a menu with all news (via rofi, right click)
-menu_prompt="Find news"
-_menu_lines=15
-
-# number of characters for the output
-# zero means no limit
-length=70  # a value >= 0
-# used only when length > 0
-add_ellipsis="yes"  # yes|no
+length=70  # number of characters for the output. 0 = no limit
+add_ellipsis="yes"  # used only when length > 0
 
 error_bg_color="#282a36"
 error_fg_color="#ff5555"
@@ -28,10 +21,6 @@ module_obj_dir=${XDG_CACHE_HOME}/polybar-news
 
 feed_file=${module_obj_dir}/news.items
 feeds=${XDG_CONFIG_HOME}/newsboat/urls
-menu_file=${feed_file}.menu
-menu_scrollbar=true
-rofi_list=${menu_file}.${show_site}
-rofi_options=""
 rss_lock=${module_obj_dir}/news.lock
 rss_py=${module_dir}/download_rss_feeds.py
 rss_url=${module_obj_dir}/news.url
@@ -55,21 +44,6 @@ print_msg() {
     fi
 }
 
-write_rofi_list() {
-    # generate the list of news to show in rofi
-    cp -f "${feed_file}" "${menu_file}"
-
-    if [ -f "${feed_file}" ]; then
-        awk -v show_site="${show_site}" '
-            # ignore links to news
-            NR % 3 == 0 {print $0; next}
-            (NR-1) % 3 == 0 && (show_site == "yes") {printf "%s: ", $0}
-            (NR-2) % 3 == 0
-        ' "${menu_file}" > "${rofi_list}"
-    fi
-}
-
-
 download_rss() {
     if [ ! -f "${feeds}" ]; then
         print_msg error "no feeds file found!"
@@ -92,37 +66,8 @@ download_rss() {
     (
         touch "${rss_lock}"
         ${python_cmd} "${rss_py}" "${feeds}" "${feed_file}"
-        if [ "X${show_menu}X" = "XyesX" ]; then
-            write_rofi_list
-        fi
         rm -f "${rss_lock}"
     )
-
-    exit 0
-}
-
-show_menu() {
-    # show a menu with all news (via rofi)
-    if [ -f "${rss_lock}" ]; then
-        rofi ${rofi_options} -e "Downloading RSS/Atom feeds"
-        exit 0
-    fi
-
-    if [ ! -f "${menu_file}" ] || [ ! -f "${rofi_list}" ]; then
-        write_rofi_list
-    fi
-
-    choice="$(awk 'NR % 2 == 1' "${rofi_list}" | \
-        rofi ${rofi_options} \
-            -p "${menu_prompt}" \
-            -dmenu \
-            -format d \")"
-
-    if [ -n "${choice}" ]; then
-        url="$(sed -n -e $((choice*2))p "${rofi_list}")"
-        xdg-open "${url}";
-        exit 0
-    fi
 
     exit 0
 }
@@ -162,9 +107,6 @@ main() {
             exit 0
         elif [ "$1" = "download" ] && [ ! -f "${rss_lock}" ]; then
             download_rss
-            exit 0
-        elif [ "$1" = "show_menu" ] && [ ! -f "${rss_lock}" ]; then
-            show_menu
             exit 0
         else
             print_msg warning "Downloading RSS/Atom feeds"
