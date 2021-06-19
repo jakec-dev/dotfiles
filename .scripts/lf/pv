@@ -93,31 +93,34 @@ esac
 
 
 case "$(file -Lb --mime-type -- "$1")" in
-  text/*)
-    source-highlight -q --outlang-def=esc.outlang --style-file=esc.style -i "$1" || cat -- "$1"
-    exit 0
-    ;;
-  image/*)
-    if [ -n "$FIFO_UEBERZUG" ]; then
-      orientation="$(identify -format '%[EXIF:Orientation]\n' -- "$1")"
-      if [ -n "$orientation" ] && [ "$orientation" != 1 ]; then
-        cache="$(hash "$1").jpg"
-        cache "$cache"
-        convert -- "$1" -auto-orient "$cache"
-        draw "$cache"
-      else
-        draw "$1"
-      fi
-    fi
-    ;;
-  video/*)
-    if [ -n "$FIFO_UEBERZUG" ]; then
-      cache="$(hash "$1").jpg"
-      cache "$cache"
-      ffmpegthumbnailer -i "$1" -o "$cache" -s 0
-      draw "$cache"
-    fi
-    ;;
+    application/json)
+        source-highlight -q --outlang-def=esc.outlang --style-file=esc.style -i "$1" || cat -- "$1"
+        ;;
+    text/*)
+        source-highlight -q --outlang-def=esc.outlang --style-file=esc.style -i "$1" || cat -- "$1"
+        exit 0
+        ;;
+    image/*)
+        if [ -n "$FIFO_UEBERZUG" ]; then
+          orientation="$(identify -format '%[EXIF:Orientation]\n' -- "$1")"
+          if [ -n "$orientation" ] && [ "$orientation" != 1 ]; then
+            cache="$(hash "$1").jpg"
+            cache "$cache"
+            convert -- "$1" -auto-orient "$cache"
+            draw "$cache"
+          else
+            draw "$1"
+          fi
+        fi
+        ;;
+    video/*)
+        if [ -n "$FIFO_UEBERZUG" ]; then
+          cache="$(hash "$1").jpg"
+          cache "$cache"
+          ffmpegthumbnailer -i "$1" -o "$cache" -s 0
+          draw "$cache"
+        fi
+        ;;
 esac
 
 header_text="File Type Classification"
@@ -136,4 +139,4 @@ else
 fi
 printf '\033[7m%s\033[0m\n' "$header"
 file -Lb -- "$1" | fold -s -w "$width"
-exit 0
+exit 1
