@@ -18,6 +18,13 @@ alias ls='ls --color=auto --group-directories-first -N'
 alias c="clear"
 alias q="exit"
 
+# xdg-mime shortcuts
+alias filetype="xdg-mime query filetype"
+alias defaultapp="xdg-mime query default"
+#fileapp() {
+    #defaultapp $(filetype $1)
+#}
+
 # cd + ls in one command
 cl() {
     local dir="$1"
