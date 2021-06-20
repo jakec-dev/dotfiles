@@ -1,0 +1,15 @@
+
+[Default Applications]
+application/json=vim.desktop
+application/pdf=org.pwmt.zathura.desktop
+text/x-shellscript=vim.desktop
+text/x-ruby=vim.desktop
+text/plain=vim.desktop
+text/*=vim.desktop
+video/*=mpv.desktop
+image/*=sxiv.desktop
+image/jpeg=sxiv.desktop
+image/png=sxiv.desktop
+inode/x-empty=vim.desktop
+text/x-script.python=vim.desktop
+
