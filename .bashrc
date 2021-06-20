@@ -47,6 +47,7 @@ alias i3config="vim $XDG_CONFIG_HOME/i3/config"
 alias pbconfig="vim $XDG_CONFIG_HOME/polybar/config"
 
 # app shortcuts
+alias battlestation="bpytop"
 alias vol="pulsemixer"
 alias bluetooth="bluetoothctl"
 alias wallpaper="nitrogen"
