@@ -10,6 +10,8 @@ hi LineNr ctermfg=DarkGrey
 filetype plugin on
 filetype indent on
 
+set mouse=a
+
 set showcmd
 set nocompatible
 set statusline=
