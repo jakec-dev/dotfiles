@@ -31,6 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+Return exec i3-sensible-terminal --class="narrowTerminal"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -198,7 +199,7 @@ for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Require
 for_window [title="^Steam Keyboard$"] floating enable
 
 # default window widths
-for_window [class="^kitty$" instance="^kitty$"] resize set 30 ppt
+for_window [class="^narrowTerminal$"] resize set 30 ppt
 for_window [class="^floatingKitty$"] resize set 50 ppt 70 ppt
 
 # class                 border  bground text    indicator child_border
