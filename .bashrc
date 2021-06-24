@@ -14,6 +14,7 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
 fi
 
 # command shortcuts
+alias sudo="sudo -v; sudo "
 alias ls='ls --color=auto --group-directories-first -N'
 alias c="clear"
 alias q="exit"
@@ -21,9 +22,6 @@ alias q="exit"
 # xdg-mime shortcuts
 alias filetype="xdg-mime query filetype"
 alias defaultapp="xdg-mime query default"
-#fileapp() {
-    #defaultapp $(filetype $1)
-#}
 
 # cd + ls in one command
 cl() {
@@ -36,21 +34,16 @@ cl() {
     fi
 }
 
-# refresh sudo timeout every time sudo is used (rather than increasing sudo timestamp_timeout), pass aliases to sudo root
-alias sudo="sudo -v; sudo "
-
 # terminal prompt
 PS1='\W > '
-
-# config shortcuts
-alias i3config="vim $XDG_CONFIG_HOME/i3/config"
-alias pbconfig="vim $XDG_CONFIG_HOME/polybar/config"
 
 # app shortcuts
 alias battlestation="bpytop"
 alias vol="pulsemixer"
 alias bluetooth="bluetoothctl"
-alias wallpaper="nitrogen"
+alias firewall="sudo gufw"
+alias mount-phone="simple-mtpfs phone/"
+alias unmount-phone="fusermount -u phone/"
 alias news="newsboat"
 alias weather="curl wttr.in/'Gold Coast, Australia'"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
@@ -61,12 +54,10 @@ source <(kitty + complete setup bash)
 # define lang
 LANG=en_US.UTF-8
 
-# manage dotfiles using 'config' instead of 'git'
-# https://github.com/jakec-dev/dotfiles
+# manage dotfiles - https://github.com/jakec-dev/dotfiles
 alias config='/usr/bin/git --git-dir=/home/jake/.cfg/ --work-tree=/home/jake'
 
 # icons for lf
-# NO FURTHER CONFIG BELOW, DON'T BOTHER SCROLLING!
 export LF_ICONS="\
 tw=:\
 st=:\
