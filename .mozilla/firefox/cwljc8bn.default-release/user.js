@@ -1613,7 +1613,11 @@ user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switc
    // user_pref("full-screen-api.warning.timeout", 0);
 /* APPEARANCE ***/
    // user_pref("browser.download.autohideButton", false); // [FF57+]
-   // user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68+] allow userChrome/userContent
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68+] allow userChrome/userContent
+user_pref("svg.context-properties.content.enabled", true);
+user_pref("layout.css.backdrop-filter.enabled", true);
+user_pref("browser.compactmode.show", true);
+
 /* CONTENT BEHAVIOR ***/
    // user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
    // user_pref("clipboard.autocopy", false); // disable autocopy default [LINUX]
