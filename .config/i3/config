@@ -221,7 +221,12 @@ bindsym $mod+c [class="^scratchpadVimwiki$"] scratchpad show
 bindsym $mod+x [class="^scratchpadLf$"] scratchpad show
 bindsym $mod+z [class="^scratchpadTerm$"] scratchpad show
 
+# https://wiki.archlinux.org/title/I3#Correct_handling_of_floating_dialogs
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
 # launch apps
+exec_always --no-startup-id autotiling
 exec_always --no-startup-id $SCRIPTS_HOME/polybar/launch.sh
 exec_always --no-startup-id picom --experimental-backends
 
