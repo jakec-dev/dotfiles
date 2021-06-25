@@ -37,18 +37,7 @@ alias trm="trash-put"
 alias tli="trash-list"
 alias tre="trash-restore"
 alias tde="trash-rm"
-
-tem() {
-    trash_count="$(trash-list | wc -l)"
-    echo "Trash can contents:"
-    trash-list
-    echo
-    read -p "Are you sure you want to empty $trash_count items from the trash can? This is irreversible (y/N) " tem_res
-    if [[ $tem_res = "y" ]]; then
-        trash-empty
-        echo "$trash_count items permanently deleted"
-    fi
-}
+alias tme="$SCRIPTS_HOME/system/empty-trash.sh"
 
 # xdg-mime shortcuts
 alias filetype="xdg-mime query filetype"
