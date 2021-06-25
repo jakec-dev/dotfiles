@@ -15,7 +15,7 @@ fi
 
 # command shortcuts
 alias sudo="sudo -v; sudo "
-alias ls='ls --color=auto --group-directories-first -N'
+alias ls='ls --color=auto --group-directories-first -Nhs1q'
 alias c="clear"
 alias q="exit"
 
