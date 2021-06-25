@@ -13,15 +13,11 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-# command shortcuts
+# command tweaks
 alias sudo="sudo -v; sudo "
 alias ls='ls --color=auto --group-directories-first -Nhs1q'
 alias c="clear"
 alias q="exit"
-
-# xdg-mime shortcuts
-alias filetype="xdg-mime query filetype"
-alias defaultapp="xdg-mime query default"
 
 # cd + ls in one command
 cl() {
@@ -33,6 +29,30 @@ cl() {
         echo "bash: cl: $dir: Directory not found"
     fi
 }
+
+# trash-cli shortcuts
+# https://github.com/andreafrancia/trash-cli/
+alias rm='echo "You fool! Use trm to move files to trash or \rm to permanently delete file"; false'
+alias trm="trash-put"
+alias tli="trash-list"
+alias tre="trash-restore"
+alias tde="trash-rm"
+
+tem() {
+    trash_count="$(trash-list | wc -l)"
+    echo "Trash can contents:"
+    trash-list
+    echo
+    read -p "Are you sure you want to empty $trash_count items from the trash can? This is irreversible (y/N) " tem_res
+    if [[ $tem_res = "y" ]]; then
+        trash-empty
+        echo "$trash_count items permanently deleted"
+    fi
+}
+
+# xdg-mime shortcuts
+alias filetype="xdg-mime query filetype"
+alias defaultapp="xdg-mime query default"
 
 # terminal prompt
 PS1='\W > '
