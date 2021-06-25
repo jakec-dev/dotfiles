@@ -37,7 +37,7 @@ font-1 = Font Awesome 5 Brands:style=Regular:pixelsize=10;3
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;3
 font-3 = Font Awesome 5 Free:style=Regular:pixelsize=10;3
 modules-left = app-launcher i3 new-workspace xwindow
-modules-center = news
+;modules-center = news
 modules-right =  terminal file-manager notes bluetooth redshift wifi vpn package-updates trash volume time power-menu
 wm-restack = i3
 cursor-click = pointer
@@ -88,7 +88,7 @@ format-background =
 [module/xwindow]
 type = internal/xwindow
 label = >> %title%
-label-maxlen = 50
+label-maxlen = 120
 format = <label>
 format-padding = 0
 format-underline =
