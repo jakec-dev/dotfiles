@@ -7,7 +7,6 @@ set previewer ~/.scripts/lf/pv
 set cleaner ~/.scripts/lf/cls
 set ratios 1:2:3
 set icons
-set color256
 set ignorecase
 set drawbox
 set hidden
