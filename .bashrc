@@ -15,9 +15,13 @@ fi
 
 # command tweaks
 alias sudo="sudo -v; sudo "
-alias ls='ls --color=auto --group-directories-first -Nhs1q'
+alias ls="ls --color=auto --group-directories-first -Nhs1q"
 alias c="clear"
 alias q="exit"
+
+# fix ssh issue when using kitty terminal
+# https://wiki.archlinux.org/title/Kitty#Terminal_issues_with_SSH
+alias ssh="kitty +kitten ssh "
 
 # cd + ls in one command
 cl() {
