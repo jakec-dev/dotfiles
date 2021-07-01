@@ -85,6 +85,7 @@ redshift
 rofi
 rofi-calc
 sed
+smartmontools
 source-highlight
 steam
 sudo
@@ -118,9 +119,11 @@ udisks2
 ueberzug
 unrar
 unzip
+vagrant
 vim-nerdcommenter
 vim-nerdtree
 virtualbox
+virtualbox-guest-iso
 which
 xcursor-comix
 xdg-user-dirs
