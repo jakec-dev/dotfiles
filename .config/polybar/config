@@ -38,7 +38,7 @@ font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;3
 font-3 = Font Awesome 5 Free:style=Regular:pixelsize=10;3
 modules-left = app-launcher i3 new-workspace xwindow
 ;modules-center = news
-modules-right =  terminal file-manager notes bluetooth redshift wifi vpn package-updates trash volume time power-menu
+modules-right =  terminal file-manager notes bluetooth redshift wifi vpn package-updates trash alerts volume time power-menu
 wm-restack = i3
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -183,6 +183,12 @@ type = custom/script
 exec = $SCRIPTS_HOME/polybar/trash.sh
 interval = 5
 click-left = $TERMINAL --class=floatingKitty bash -c "$SCRIPTS_HOME/system/empty-trash.sh"
+
+[module/alerts]
+type = custom/script
+exec = $SCRIPTS_HOME/polybar/alerts.sh
+interval = 5
+click-left = $SCRIPTS_HOME/polybar/alerts.sh show
 
 [module/volume]
 type = custom/script
