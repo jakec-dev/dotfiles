@@ -111,6 +111,7 @@ map ar tar
 # Bookmarks
 map gc cd ~/.config/
 map gs cd ~/.scripts/
+map gt cd /media/storage/Torrents/
 
 # Open
 cmd open $$OPENER $fx
