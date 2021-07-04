@@ -60,6 +60,7 @@ alias unmount-phone="fusermount -u phone/"
 alias news="newsboat"
 alias weather="curl wttr.in/'Gold Coast, Australia'"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
+alias vagrant="TERM=xterm-256color vagrant"
 
 # completion for kitty terminal
 source <(kitty + complete setup bash)
