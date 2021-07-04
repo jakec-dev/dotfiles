@@ -56,6 +56,7 @@ mpv
 neofetch
 networkmanager
 newsboat
+nfs-utils
 nitrogen
 nodejs
 noto-fonts
