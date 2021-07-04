@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=PDF Reader
+Exec=/usr/bin/i3-swallow /usr/bin/zathura %U
