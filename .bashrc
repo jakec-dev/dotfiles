@@ -61,6 +61,10 @@ alias news="newsboat"
 alias weather="curl wttr.in/'Gold Coast, Australia'"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
 alias vagrant="TERM=xterm-256color vagrant"
+wiki() {
+    search_term="${1}"
+    lynx https://wiki.archlinux.org/index.php?search=${search_term}
+}
 
 # completion for kitty terminal
 source <(kitty + complete setup bash)
