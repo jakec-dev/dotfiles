@@ -7,12 +7,10 @@ pkglist_aur="$(pacman -Qqem)"
 
 case $1 in
     pac-hook)
-        trash-put ${outdir}/pkglist.txt ${outdir}/pkglist-aur.txt
         echo "$pkglist" > ${outdir}/pkglist.txt
         echo "$pkglist_aur" > ${outdir}/pkglist-aur.txt
         ;;
     backup)
-        trash-put ${backup_dir}/pkglist.txt ${backup_dir}/pkglist-aur.txt
         echo "$pkglist" > ${backup_dir}/pkglist.txt
         echo "$pkglist_aur" > ${backup_dir}/pkglist-aur.txt
         ;;
