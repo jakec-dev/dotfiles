@@ -15,7 +15,7 @@ fi
 
 # command tweaks
 alias sudo="sudo -v; sudo "
-alias ls="ls --color=auto --group-directories-first -Nhs1q"
+alias ls="ls --human-readable -1 --literal --hide-control-chars --color=auto --group-directories-first --size --dereference"
 alias c="clear"
 alias q="exit"
 
@@ -62,8 +62,8 @@ alias weather="curl wttr.in/'Gold Coast, Australia'"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
 alias vagrant="TERM=xterm-256color vagrant"
 wiki() {
-    search_term="${1}"
-    lynx https://wiki.archlinux.org/index.php?search=${search_term}
+    search_term="$(echo $@ | sed 's/ /+/g')"
+    lynx https://wiki.archlinux.org/index.php?search=${search_term} 
 }
 
 # completion for kitty terminal
