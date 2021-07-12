@@ -122,7 +122,6 @@ unrar
 unzip
 vagrant
 vim-nerdcommenter
-vim-nerdtree
 virtualbox
 virtualbox-guest-iso
 which

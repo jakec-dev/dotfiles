@@ -16,7 +16,6 @@ sonarr
 streamlink-twitch-gui
 tutanota-desktop
 vim-coc
-vim-nerdtree-syntax-highlight
 vim-vimwiki
 virtualbox-ext-oracle
 yay
