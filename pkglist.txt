@@ -4,6 +4,7 @@ autoconf
 automake
 aws-cli
 base
+bash-completion
 binutils
 bison
 bluez
