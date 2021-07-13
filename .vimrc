@@ -1,3 +1,4 @@
+set nocompatible
 syntax on
 let mapleader = ","
 
@@ -13,7 +14,6 @@ filetype indent on
 set mouse=a
 
 set showcmd
-set nocompatible
 set statusline=
 set laststatus=0
 set tabstop=4
@@ -43,12 +43,5 @@ nnoremap <space> za
 nnoremap j gj
 nnoremap k gk
 nnoremap <F3> :r! date "+\%A, \%d \%B \%Y"<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <C-n> :NERDTreeFocus<CR>
-
-let g:NERDTreeGitStatusWithFlags = 1
-let g:WebDevIconsUnicodeFolderNodes = 1
-let g:NERDTreeGitStatusNodeColorization = 1
-let g:NERDTreeIgnore = ['^node_modules$']
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
