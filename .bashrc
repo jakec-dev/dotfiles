@@ -15,7 +15,7 @@
 
 # command tweaks
 alias sudo="sudo -v; sudo "
-alias ls="ls --human-readable -1 --literal --hide-control-chars --color=auto --group-directories-first --size --dereference"
+alias ls="ls --human-readable -1 --literal --hide-control-chars --color=auto --group-directories-first --size"
 alias c="clear"
 alias q="exit"
 
