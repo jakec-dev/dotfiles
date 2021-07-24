@@ -81,6 +81,7 @@ perl-json-xs
 pkgconf
 pulseaudio
 pulsemixer
+python-llfuse
 python-pip
 qbittorrent
 redshift
@@ -93,6 +94,7 @@ steam
 sudo
 sxiv
 syncthing
+task
 texinfo
 texlive-bibtexextra
 texlive-core
@@ -112,6 +114,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+timew
 tldr
 trash-cli
 ttf-font-awesome

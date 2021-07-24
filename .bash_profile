@@ -31,6 +31,10 @@ export OPENER="xdg-open"
 export PAGER="less"
 export WM="i3"
 
+# Task Manager
+export TASKRC=$XDG_CONFIG_HOME/task/taskrc
+export TASKDATA=$HOME/Documents/.task task list
+
 # Start startx
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	exec startx
