@@ -11,6 +11,7 @@ bluez
 bluez-utils
 borgmatic
 bpytop
+calibre
 djvulibre
 dmenu
 dnscrypt-proxy
