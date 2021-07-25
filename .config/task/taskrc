@@ -29,3 +29,32 @@ data.location=/home/jake/Documents/.task
 #include /usr/share/doc/task/rc/solarized-light-256.theme
 #include /usr/share/doc/task/rc/no-color.theme
 
+# Datetime settings
+weekstart=Monday
+
+# Default values
+#default.project=Inbox
+
+# Urgency coefficients
+urgency.user.tag.urgent.coefficient=10.0
+urgency.user.tag.later.coefficient=-6.0
+
+# Contexts
+alias.@=context
+context.study=project:Education
+context.home=project:Personal
+context.work=project:Work
+
+# Inbox report
+report.inbox.columns           = id,description
+report.inbox.description       = Inbox
+report.inbox.filter            = limit:page (+inbox)
+report.inbox.labels            = ID,Description
+
+# Reviewing tasks
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )

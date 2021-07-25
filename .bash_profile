@@ -31,9 +31,10 @@ export OPENER="xdg-open"
 export PAGER="less"
 export WM="i3"
 
-# Task Manager
+# Task/Time Warrior
 export TASKRC=$XDG_CONFIG_HOME/task/taskrc
 export TASKDATA=$HOME/Documents/.task task list
+export TIMEWARRIORDB=$HOME/Documents/.time
 
 # Start startx
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

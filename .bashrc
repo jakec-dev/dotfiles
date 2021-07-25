@@ -51,6 +51,7 @@ alias defaultapp="xdg-mime query default"
 PS1='\W > '
 
 # app shortcuts
+alias in="task add +inbox"
 alias battlestation="bpytop"
 alias vol="pulsemixer"
 alias bluetooth="bluetoothctl"
