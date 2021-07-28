@@ -37,19 +37,30 @@ weekstart=Monday
 
 # Urgency coefficients
 urgency.user.tag.urgent.coefficient=10.0
+urgency.user.tag.rnd.coefficient=-2
 urgency.user.tag.later.coefficient=-6.0
 
 # Contexts
 alias.@=context
-context.study=project:Education
-context.home=project:Personal
-context.work=project:Work
+context.study=project:Education or +study
+context.home=project:Personal or +home
+context.work=project:Work or +work
 
 # Inbox report
-report.inbox.columns           = id,description
-report.inbox.description       = Inbox
-report.inbox.filter            = limit:page (+inbox)
-report.inbox.labels            = ID,Description
+report.in.columns           = id,description
+report.in.description       = Inbox
+report.in.filter            = status:pending (+inbox)
+report.in.labels            = ID,Description
+
+# UDAs
+uda.estimate.type=numeric
+uda.estimate.label=Estimate
+
+# Taskwarrior-tui
+uda.taskwarrior-tui.task-report.next.filter=status:pending
+uda.taskwarrior-tui.shortcuts.9=~/.config/taskwarrior-tui/open-note.sh
+uda.taskwarrior-tui.shortcuts.1=~/.config/taskwarrior-tui/task-inbox.sh
+uda.taskwarrior-tui.shortcuts.2=~/.config/taskwarrior-tui/filter-all-child-tasks.sh
 
 # Reviewing tasks
 uda.reviewed.type=date
@@ -58,3 +69,33 @@ report._reviewed.description=Tasksh review report.  Adjust the filter to your ne
 report._reviewed.columns=uuid
 report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
+report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,estimate,description,urgency
+report.next.labels=ID,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Est,Description,Urg
+
+# Bugwarrior
+uda.githubtitle.type=string
+uda.githubtitle.label=Github Title
+uda.githubbody.type=string
+uda.githubbody.label=Github Body
+uda.githubcreatedon.type=date
+uda.githubcreatedon.label=Github Created
+uda.githubupdatedat.type=date
+uda.githubupdatedat.label=Github Updated
+uda.githubclosedon.type=date
+uda.githubclosedon.label=GitHub Closed
+uda.githubmilestone.type=string
+uda.githubmilestone.label=Github Milestone
+uda.githubrepo.type=string
+uda.githubrepo.label=Github Repo Slug
+uda.githuburl.type=string
+uda.githuburl.label=Github URL
+uda.githubtype.type=string
+uda.githubtype.label=Github Type
+uda.githubnumber.type=numeric
+uda.githubnumber.label=Github Issue/PR #
+uda.githubuser.type=string
+uda.githubuser.label=Github User
+uda.githubnamespace.type=string
+uda.githubnamespace.label=Github Namespace
+uda.githubstate.type=string
+uda.githubstate.label=GitHub State
