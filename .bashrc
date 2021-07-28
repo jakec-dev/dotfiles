@@ -50,8 +50,20 @@ alias defaultapp="xdg-mime query default"
 # terminal prompt
 PS1='\W > '
 
-# app shortcuts
+# task management
 alias in="task add +inbox"
+tickle() {
+    deadline=$1
+    shift
+    in +tickle wait:$deadline $@
+}
+alias tick=tickle
+alias think="tickle +1d"
+alias rnd="task add +rnd +next +@computer +@online"
+alias tui="taskwarrior-tui"
+alias inbox="tui --report=in"
+
+# app shortcuts
 alias battlestation="bpytop"
 alias vol="pulsemixer"
 alias bluetooth="bluetoothctl"
