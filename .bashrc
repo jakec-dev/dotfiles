@@ -62,6 +62,7 @@ alias think="tickle +1d"
 alias rnd="task add +rnd +next +@computer +@online"
 alias tui="taskwarrior-tui"
 alias inbox="tui --report=in"
+alias sch="task due:today status.any: next"
 
 # app shortcuts
 alias battlestation="bpytop"
