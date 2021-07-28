@@ -1,14 +1,19 @@
 #!/bin/bash
 
-color_empty="#50fa7b"
-color_not_empty="#ff5555"
+color_ok="#50fa7b"
+color_warning="#ffb86c"
+color_attention="#ff5555"
 
 function inbox() {
     inbox_count=$(task +inbox status:pending count 2>/dev/null)
-    if [[ $inbox_count > 0 ]]; then
-        echo "%{F$color_not_empty} $inbox_count"
+    if [ $inbox_count -ge 15 ]; then
+        echo "%{F$color_attention} $inbox_count"
+    elif [ $inbox_count -gt 5 ]; then
+        echo "%{F$color_warning} $inbox_count"
+    elif [ $inbox_count -gt 0 ]; then
+        echo "%{F$color_ok} $inbox_count"
     else
-        echo "%{F$color_empty}"
+        echo "%{F$color_ok}"
     fi
 }
 
