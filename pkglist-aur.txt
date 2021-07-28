@@ -1,4 +1,5 @@
 autotiling
+bugwarrior
 dracula-gtk-theme
 freetube-bin
 freezer-bin
