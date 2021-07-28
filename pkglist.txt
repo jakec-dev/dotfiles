@@ -96,6 +96,7 @@ sudo
 sxiv
 syncthing
 task
+taskwarrior-tui
 texinfo
 texlive-bibtexextra
 texlive-core
