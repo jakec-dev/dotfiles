@@ -189,7 +189,7 @@ click-left = $TERMINAL --class=floatingKitty bash -c "$SCRIPTS_HOME/system/empty
 type = custom/script
 exec = $SCRIPTS_HOME/polybar/tasks.sh
 interval = 3
-click-left = $TERMINAL --class=floatingKitty bash -c "task +inbox all 2>/dev/null; $SHELL"
+click-left = $TERMINAL --class=floatingKitty bash -c "taskwarrior-tui --report=in"
 
 [module/alerts]
 type = custom/script
