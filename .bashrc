@@ -16,6 +16,7 @@
 # command tweaks
 alias sudo="sudo -v; sudo "
 alias ls="ls --human-readable -1 --literal --hide-control-chars --color=auto --group-directories-first --size"
+alias yeet="sudo pacman -Rns"
 alias c="clear"
 alias q="exit"
 
@@ -32,6 +33,13 @@ cl() {
     else
         echo "bash: cl: $dir: Directory not found"
     fi
+}
+
+# create a bash script file
+mks() {
+    echo "#!/bin/bash" > $@
+    chmod 775 $@
+    $EDITOR $@
 }
 
 # trash-cli shortcuts
@@ -63,6 +71,40 @@ alias rnd="task add +rnd +next +@computer +@online"
 alias tui="taskwarrior-tui"
 alias inbox="tui --report=in"
 alias sch="task due:today status.any: next"
+prjco() {
+    [[ $3 ]] && { echo "Too many arguments provided"; return 1; }
+    [[ ! $2 ]] && { echo "Not enough arguments. Format is 'prjco \"<project>\" <coefficient>"; return 1; }
+    task config "urgency.user.project.$1.coefficient" $2
+}
+
+# calendar
+reminder() {
+    OWD="$(pwd)"
+    cd ~/Documents/Sync/.reminders
+   
+    arg_before=
+    arg_after=
+    while [[ $# -gt 0 ]]; do
+        key="$1"
+        case $key in
+            --after)
+                arg_after="$2"
+                shift
+                shift
+                ;;
+            *)
+                arg_before="$1"
+                shift
+                ;;
+        esac
+    done
+    remind $arg_before ./main.rem $arg_after
+    
+    cd "$OWD"
+}
+alias remind=reminder
+alias rem="echo REM $@ >> ~/Documents/Sync/.reminders/cli.rem"
+alias rem-edit="$EDITOR ~/Documents/Sync/.reminders/cli.rem"
 
 # app shortcuts
 alias battlestation="bpytop"
@@ -74,9 +116,10 @@ alias unmount-phone="fusermount -u phone/"
 alias news="newsboat"
 alias weather="curl wttr.in/'Gold Coast, Australia'"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
+alias vimwiki="vim -c VimwikiIndex"
 alias vagrant="TERM=xterm-256color vagrant"
 wiki() {
-    search_term="$(echo $@ | sed 's/ /+/g')"
+    search_term="$(echo "$@" | sed 's/ /+/g')"
     lynx https://wiki.archlinux.org/index.php?search=${search_term} 
 }
 
