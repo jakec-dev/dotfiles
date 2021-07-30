@@ -86,6 +86,7 @@ python-llfuse
 python-pip
 qbittorrent
 redshift
+remind
 rofi
 rofi-calc
 sed
