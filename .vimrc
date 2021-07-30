@@ -33,9 +33,11 @@ set mat=2
 set incsearch
 set hlsearch
 set ignorecase
-set foldenable
-set foldlevelstart=10
-set foldmethod=indent
+
+set nofoldenable
+set foldmethod=syntax
+let g:markdown_folding = 1
+let g:vimwiki_folding = 'syntax'
 
 vmap <C-c> "+y
 
@@ -45,5 +47,6 @@ nnoremap k gk
 nnoremap <F3> :r! date "+\%A, \%d \%B \%Y"<CR>
 
 let g:vimwiki_list = [{'path': '~/Documents/Sync/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_global_ext = 0
 let g:taskwiki_taskrc_location = '~/.config/task/taskrc'
-let g:taskwiki_data_location = '~/Documents/.task'
+let g:taskwiki_data_location = '~/Documents/Sync/.task'
