@@ -38,7 +38,7 @@ font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;3
 font-3 = Font Awesome 5 Free:style=Regular:pixelsize=10;3
 modules-left = app-launcher i3 new-workspace xwindow
 ;modules-center = news
-modules-right =  terminal file-manager notes redshift package-updates trash tasks-inbox alerts volume time power-menu
+modules-right =  terminal file-manager notes tui redshift package-updates trash tasks-inbox dotfiles alerts volume time power-menu
 wm-restack = i3
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -141,6 +141,13 @@ click-left = $SCRIPTS_HOME/polybar/open-vimwiki.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
+[module/tui]
+type = custom/script
+exec = echo  tasks
+click-left = $TERMINAL --class=floatingKitty taskwarrior-tui
+format-foreground = ${colors.app}
+format-underline = ${colors.app}
+
 [module/bluetooth]
 type = custom/script
 exec = rofi-bluetooth --status
@@ -190,6 +197,12 @@ type = custom/script
 exec = $SCRIPTS_HOME/polybar/tasks.sh
 interval = 3
 click-left = $TERMINAL --class=floatingKitty bash -c "taskwarrior-tui --report=in"
+
+[module/dotfiles]
+type = custom/script
+exec = $SCRIPTS_HOME/polybar/dotfiles-status.sh
+interval = 3
+click-left = $TERMINAL --class=floatingKitty bash -c "git --git-dir=$HOME/.cfg/ --work-tree=$HOME status; $SHELL"
 
 [module/alerts]
 type = custom/script
