@@ -227,7 +227,7 @@ for_window [window_role="task_dialog"] floating enable
 
 # launch apps
 exec_always --no-startup-id autotiling
-exec_always --no-startup-id $SCRIPTS_HOME/polybar/launch.sh
+exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
 exec_always --no-startup-id picom --experimental-backends
 
 # load layout
