@@ -115,35 +115,35 @@ format-underline = ${colors.app}
 
 [module/terminal]
 type = custom/script
-exec = echo  terminal
+exec = echo 
 click-left = $XDG_CONFIG_HOME/polybar/open-terminal.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
 [module/calculator]
 type = custom/script
-exec = echo  calculator
+exec = echo 
 click-left = rofi -show calc -modi calc -no-show-match -no-sort -display-calc "" &
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
 [module/file-manager]
 type = custom/script
-exec = echo  files
+exec = echo 
 click-left = $XDG_CONFIG_HOME/polybar/open-files.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
 [module/notes]
 type = custom/script
-exec = echo  notes
+exec = echo 
 click-left = $XDG_CONFIG_HOME/polybar/open-vimwiki.sh 
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
 [module/tui]
 type = custom/script
-exec = echo  tasks
+exec = echo 
 click-left = $TERMINAL --class=floatingKitty taskwarrior-tui
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
