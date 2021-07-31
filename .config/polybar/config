@@ -190,7 +190,7 @@ interval = 5
 type = custom/script
 exec = $XDG_CONFIG_HOME/polybar/trash.sh
 interval = 5
-click-left = $TERMINAL --class=floatingKitty bash -c "$XDG_CONFIG_HOME/system/empty-trash.sh"
+click-left = $TERMINAL --class=floatingKitty bash -c "$SCRIPTS_HOME/system/empty-trash.sh"
 
 [module/tasks-inbox]
 type = custom/script
