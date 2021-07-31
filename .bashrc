@@ -59,16 +59,8 @@ alias defaultapp="xdg-mime query default"
 PS1='\W > '
 
 # task management
-alias in="task add +inbox"
-tickle() {
-    deadline=$1
-    shift
-    in +tickle wait:$deadline $@
-}
-alias tick=tickle
-alias think="tickle +1d"
-alias rnd="task add +rnd +next +@computer +@online"
 alias tui="taskwarrior-tui"
+alias in="task add +inbox"
 alias inbox="tui --report=in"
 alias sch="task due:today status.any: next"
 prjco() {
