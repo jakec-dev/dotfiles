@@ -20,5 +20,4 @@ tutanota-desktop
 vim-coc
 vim-vimwiki
 virtualbox-ext-oracle
-wyrd-git
 yay
