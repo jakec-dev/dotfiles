@@ -46,7 +46,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <F3> :r! date "+\%A, \%d \%B \%Y"<CR>
 
-let g:vimwiki_list = [{'path': '~/Documents/Sync/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/Documents/Sync/vimwiki/', 'syntax': 'markdown', 'ext': '.md', 'auto_toc': 1}]
 let g:vimwiki_global_ext = 0
+let g:vimwiki_toc_header_level = 2
 let g:taskwiki_taskrc_location = '~/.config/task/taskrc'
 let g:taskwiki_data_location = '~/Documents/Sync/.task'
