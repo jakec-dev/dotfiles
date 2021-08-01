@@ -7,7 +7,8 @@ primary = #8be9fd
 secondary = #ff79c6
 alert = #ff5555
 success = #50fa7b
-app = #ffb86c
+;app = #ffb86c
+app = ${colors.primary}
 
 [settings]
 screenchange-reload = true
