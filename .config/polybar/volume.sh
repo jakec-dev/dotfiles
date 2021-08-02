@@ -16,6 +16,8 @@ SINK_NICKNAMES_PROP=
 VOLUME_STEP=2
 VOLUME_MAX=130
 # shellcheck disable=SC2016
+
+
 FORMAT='$VOL_ICON ${VOL_LEVEL}%  $ICON_SINK $SINK_NICKNAME'
 declare -A SINK_NICKNAMES
 declare -a ICONS_VOLUME
@@ -24,7 +26,6 @@ declare -a SINK_BLACKLIST
 # Environment & global constants for the script
 export LANG=en_US  # Some calls depend on English outputs of pactl
 END_COLOR="%{F-}"  # For Polybar colors
-
 
 # Saves the currently default sink into a variable named `curSink`. It will
 # return an error code when pulseaudio isn't running.
@@ -327,7 +328,14 @@ function output() {
         VOL_ICON=$ICON_MUTED
         echo "${COLOR_MUTED}$(eval echo "$FORMAT")${END_COLOR}"
     else
-        eval echo "$FORMAT"
+        if [ $VOL_LEVEL -eq 100 ]; then
+            OUTPUT_COLOR="%{F#50fa7b}"
+        elif [ $VOL_LEVEL -gt 100 ]; then
+            OUTPUT_COLOR="%{F#ff5555}"
+        else
+            OUTPUT_COLOR="%{F#f1fa8c}"
+        fi
+        echo "${OUTPUT_COLOR}$(eval echo "$FORMAT")${END_COLOR}"
     fi
 }
 
