@@ -3,6 +3,7 @@
 application/json=vim.desktop
 application/pdf=org.pwmt.zathura.desktop
 text/x-shellscript=vim.desktop
+text/x-tex=vim.desktop
 text/x-ruby=vim.desktop
 text/plain=vim.desktop
 text/*=vim.desktop
