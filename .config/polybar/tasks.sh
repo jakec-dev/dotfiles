@@ -5,7 +5,7 @@ color_warning="#ffb86c"
 color_attention="#ff5555"
 
 function inbox() {
-    inbox_count=$(task +inbox status:pending count 2>/dev/null)
+    inbox_count=$(task +inbox status:pending count rc.context:none 2>/dev/null)
     if [ $inbox_count -ge 15 ]; then
         echo "%{F$color_attention} $inbox_count"
     elif [ $inbox_count -gt 5 ]; then
