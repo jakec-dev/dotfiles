@@ -1,14 +1,21 @@
 #!/bin/bash
 
 task_uuid="$@"
-project_path="$(task _get $task_uuid.project | sed 's/\./\//g')"
-task_desc="$(task _get $task_uuid.description)"
+project_desc="$(task _get $task_uuid.project)"
+project_path="$(echo $project_desc | sed 's/\./\//g')"
+project_name="$(echo $project_path | awk -F '.' '{print $NF}')"
+project_uuid="$(task project:$task_uuid.project +project uuids)"
 
-task_file="$HOME/Documents/Sync/vimwiki/tasks/$project_path/$task_uuid.md"
-if [[ ! -f $task_file ]]; then
-    mkdir -p $HOME/Documents/Sync/vimwiki/tasks/$project_path
-    echo "# $task_desc" > $task_file
-    task $task_uuid mod +notes
+project_file="$HOME/Documents/Sync/vimwiki/tasks/$project_uuid.md"
+if [[ ! -f $project_file ]]; then
+    echo -e "# $project_name || project:$project_desc \
+        \n\n## Inbox | +inbox \
+        \n\n## Next Actions | +next and status:pending \
+        \n\n## Waiting | status:waiting \
+        \n\n## Future | -VISIBLE  \
+        \n\n## Completed | status:completed \
+        \n\n## Notes" > $project_file
+    task $project_uuid mod +notes
 fi
 
-vim -c "VimwikiIndex" -c "VimwikiGoto tasks/$project_path/$task_uuid"
+vim -c "VimwikiIndex" -c "VimwikiGoto tasks/$project_uuid"
