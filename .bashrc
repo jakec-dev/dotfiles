@@ -99,6 +99,7 @@ alias rem="echo REM $@ >> ~/Documents/Sync/.reminders/cli.rem"
 alias rem-edit="$EDITOR ~/Documents/Sync/.reminders/cli.rem"
 
 # app shortcuts
+alias phone="cat ~/Documents/phone.txt"
 alias battlestation="bpytop"
 alias vol="pulsemixer"
 alias bluetooth="bluetoothctl"
