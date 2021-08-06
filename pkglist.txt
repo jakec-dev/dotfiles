@@ -32,6 +32,7 @@ geoip-database-extra
 gettext
 gimp
 git
+gnu-netcat
 grep
 groff
 grub
