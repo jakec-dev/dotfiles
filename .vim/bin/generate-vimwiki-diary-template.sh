@@ -1,6 +1,7 @@
 #!/bin/bash
 
 page_title=$(date +"%A, %d %B %Y")
+todays_date=$(date +"%Y-%m-%d")
 
 echo -e "# $page_title
 
@@ -18,6 +19,7 @@ echo -e "# $page_title
 - [Reference](#Reference)
     - [Active Projects](#Active Projects | +next and status:pending and -sod and -eod and (project.none: or description:PROJ\))
     - [Next Actions](#Next Actions | +next and status:pending and -eod and -sod)
+    - [Completed Today](#Completed Today | end:$todays_date and -inbox and status:completed)
 - [Notes](#Notes)
 
 ## What's On
@@ -41,6 +43,8 @@ $($SCRIPTS_HOME/system/reminder.sh)
 ### Active Projects | +next and status:pending and -sod and -eod and (project.none: or description:PROJ)
 
 ### Next Actions | +next and status:pending and -eod and -sod
+
+### Completed Today | end:$todays_date and -inbox and status:completed
 
 ## Notes
 "
