@@ -70,31 +70,7 @@ prjco() {
 }
 
 # calendar
-reminder() {
-    OWD="$(pwd)"
-    cd ~/Documents/Sync/.reminders
-   
-    arg_before=
-    arg_after=
-    while [[ $# -gt 0 ]]; do
-        key="$1"
-        case $key in
-            --after)
-                arg_after="$2"
-                shift
-                shift
-                ;;
-            *)
-                arg_before="$1"
-                shift
-                ;;
-        esac
-    done
-    remind $arg_before ./main.rem $arg_after
-    
-    cd "$OWD"
-}
-alias remind=reminder
+alias remind="$SCRIPTS_HOME/system/reminder.sh"
 alias rem="echo REM $@ >> ~/Documents/Sync/.reminders/cli.rem"
 alias rem-edit="$EDITOR ~/Documents/Sync/.reminders/cli.rem"
 
@@ -109,7 +85,7 @@ alias unmount-phone="fusermount -u phone/"
 alias news="newsboat"
 alias weather="curl wttr.in/'Gold Coast, Australia'"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
-alias vimwiki="vim -c VimwikiIndex"
+alias vimwiki='vim -c "set nonumber norelativenumber" -c VimwikiIndex'
 alias vagrant="TERM=xterm-256color vagrant"
 wiki() {
     search_term="$(echo "$@" | sed 's/ /+/g')"
