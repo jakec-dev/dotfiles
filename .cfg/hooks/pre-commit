@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo -e "# Dotfiles
+
+My dotfiles for Arch Linux
+
+## System
+
+\`\`\`
+$(neofetch --stdout)
+\`\`\`
+
+## Installed Apps
+
+\`\`\`
+$(pacman -Qet)
+\`\`\`" > ~/README.md
+
+git --git-dir=/home/jake/.cfg/ --work-tree=/home/jake add ~/README.md
+

@@ -100,7 +100,6 @@ LANG=en_US.UTF-8
 
 # manage dotfiles - https://github.com/jakec-dev/dotfiles
 alias config='/usr/bin/git --git-dir=/home/jake/.cfg/ --work-tree=/home/jake'
-test
 
 # icons for lf
 export LF_ICONS="\
