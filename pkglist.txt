@@ -57,7 +57,6 @@ man-db
 mpv
 neofetch
 networkmanager
-newsboat
 nfs-utils
 nitrogen
 nodejs
