@@ -68,10 +68,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+#bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+#bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -146,7 +146,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9, [workspace=$ws9] f
 bindsym $mod+Shift+0 move container to workspace number $ws10, [workspace=$ws10] focus
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -212,13 +212,19 @@ client.background       #F8F8F2
 # borders
 hide_edge_borders smart
 
-# scratchpads
-for_window [class="^scratchpadVimwiki$"] move scratchpad
-for_window [class="^scratchpadLf$"] move scratchpad
+# scratchpad apps
 for_window [class="^scratchpadTerm$"] move scratchpad
-bindsym $mod+c [class="^scratchpadVimwiki$"] scratchpad show
-bindsym $mod+x [class="^scratchpadLf$"] scratchpad show
-bindsym $mod+z [class="^scratchpadTerm$"] scratchpad show
+bindsym $mod+z exec $XDG_CONFIG_HOME/polybar/open-terminal.sh
+bindsym $mod+Shift+z exec i3-sensible-terminal --class="floatingKitty"
+for_window [class="^scratchpadLf$"] move scratchpad
+bindsym $mod+x exec $XDG_CONFIG_HOME/polybar/open-files.sh
+bindsym $mod+Shift+x exec i3-sensible-terminal --class="floatingKitty" $SCRIPTS_HOME/lf/lfrun
+for_window [class="^scratchpadVimwiki$"] move scratchpad
+bindsym $mod+c exec $XDG_CONFIG_HOME/polybar/open-vimwiki.sh
+bindsym $mod+Shift+c exec i3-sensible-terminal --class="floatingKitty" vim -c "set nonumber norelativenumber" -c VimwikiIndex
+for_window [class="^scratchpadTasks$"] move scratchpad
+bindsym $mod+v exec $XDG_CONFIG_HOME/polybar/open-tasks.sh
+bindsym $mod+Shift+v exec i3-sensible-terminal --class="floatingKitty" taskwarrior-tui
 
 # https://wiki.archlinux.org/title/I3#Correct_handling_of_floating_dialogs
 for_window [window_role="pop-up"] floating enable

@@ -96,49 +96,52 @@ format-padding = 0
 format-underline =
 format-background =
 
-[module/news]
-type = custom/script
-exec = $XDG_CONFIG_HOME/polybar/news/news-feed.sh
-interval = 180
-click-left = $XDG_CONFIG_HOME/polybar/news/news-feed.sh url
-click-middle = $XDG_CONFIG_HOME/polybar/news/news-feed.sh download
-click-right = $TERMINAL --class floatingKitty -e newsboat &
-format-prefix = " " 
-format-underline =
-format-background =
+;[module/news]
+;type = custom/script
+;exec = $XDG_CONFIG_HOME/polybar/news/news-feed.sh
+;interval = 180
+;click-left = $XDG_CONFIG_HOME/polybar/news/news-feed.sh url
+;click-middle = $XDG_CONFIG_HOME/polybar/news/news-feed.sh download
+;click-right = $TERMINAL --class floatingKitty -e newsboat &
+;format-prefix = " " 
+;format-underline =
+;format-background =
 
-[module/open-web]
-type = custom/script
-exec = echo  web
-click-left = $BROWSER &
-format-foreground = ${colors.app}
-format-underline = ${colors.app}
+;[module/open-web]
+;type = custom/script
+;exec = echo  web
+;click-left = $BROWSER &
+;format-foreground = ${colors.app}
+;format-underline = ${colors.app}
 
 [module/terminal]
 type = custom/script
 exec = echo 
-click-left = $XDG_CONFIG_HOME/polybar/open-terminal.sh
+click-left = $TERMINAL --class=floatingKitty
+click-right = $XDG_CONFIG_HOME/polybar/open-terminal.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
-[module/calculator]
-type = custom/script
-exec = echo 
-click-left = rofi -show calc -modi calc -no-show-match -no-sort -display-calc "" &
-format-foreground = ${colors.app}
-format-underline = ${colors.app}
+;[module/calculator]
+;type = custom/script
+;exec = echo 
+;click-left = rofi -show calc -modi calc -no-show-match -no-sort -display-calc "" &
+;format-foreground = ${colors.app}
+;format-underline = ${colors.app}
 
 [module/file-manager]
 type = custom/script
 exec = echo 
-click-left = $XDG_CONFIG_HOME/polybar/open-files.sh
+click-left = $TERMINAL --class=floatingKitty lf
+click-right = $XDG_CONFIG_HOME/polybar/open-files.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
 [module/notes]
 type = custom/script
 exec = echo 
-click-left = $XDG_CONFIG_HOME/polybar/open-vimwiki.sh 
+click-left = $TERMINAL --class=floatingKitty vim -c "set nonumber norelativenumber" -c VimwikiIndex
+click-right = $XDG_CONFIG_HOME/polybar/open-vimwiki.sh 
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
@@ -146,15 +149,16 @@ format-underline = ${colors.app}
 type = custom/script
 exec = echo 
 click-left = $TERMINAL --class=floatingKitty taskwarrior-tui
+click-right = $XDG_CONFIG_HOME/polybar/open-tasks.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
-[module/bluetooth]
-type = custom/script
-exec = rofi-bluetooth --status
-interval = 5 
-click-left = rofi-bluetooth & 
-format-foreground = #8be9fd
+;[module/bluetooth]
+;type = custom/script
+;exec = rofi-bluetooth --status
+;interval = 5 
+;click-left = rofi-bluetooth & 
+;format-foreground = #8be9fd
 
 [module/redshift]
 type = custom/script
@@ -163,22 +167,22 @@ click-left = $XDG_CONFIG_HOME/polybar/redshift.sh toggle
 interval = 5
 format = <label>
 
-[module/wifi]
-type = internal/network
-interface = wlp6s0
-click-left = $XDG_CONFIG_HOME/polybar/network_manager.sh &
-interval = 3
-format = <label>
-label-connected = 
-label-connected-foreground = ${colors.success}
+;[module/wifi]
+;type = internal/network
+;interface = wlp6s0
+;click-left = $XDG_CONFIG_HOME/polybar/network_manager.sh &
+;interval = 3
+;format = <label>
+;label-connected = 
+;label-connected-foreground = ${colors.success}
 
-[module/vpn]
-type = custom/script
-exec = $XDG_CONFIG_HOME/polybar/vpn.sh
-click-right = $XDG_CONFIG_HOME/polybar/vpn.sh --toggle-connection &
-click-left = $XDG_CONFIG_HOME/polybar/vpn.sh --location-menu &
-interval = 5
-format = <label>
+;[module/vpn]
+;type = custom/script
+;exec = $XDG_CONFIG_HOME/polybar/vpn.sh
+;click-right = $XDG_CONFIG_HOME/polybar/vpn.sh --toggle-connection &
+;click-left = $XDG_CONFIG_HOME/polybar/vpn.sh --location-menu &
+;interval = 5
+;format = <label>
 
 [module/package-updates]
 type = custom/script
