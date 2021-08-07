@@ -45,6 +45,7 @@ nnoremap <space> za
 nnoremap j gj
 nnoremap k gk
 nnoremap <F3> :r! date "+\%A, \%d \%B \%Y"<CR>
+nnoremap <leader>tr :TaskWikiBufferLoad<CR>
 
 let g:vimwiki_list = [{'path': '~/Documents/Sync/vimwiki/', 'syntax': 'markdown', 'ext': '.md', 'auto_toc': 1}]
 let g:vimwiki_global_ext = 0
