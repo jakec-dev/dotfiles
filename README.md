@@ -6,7 +6,7 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 06 August 2021 
+As on: 08 August 2021 
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.8-arch1-1 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 3.13GiB / 15.56GiB 
+Memory: 1.77GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -28,12 +28,12 @@ Memory: 3.13GiB / 15.56GiB
 acpilight 1.2-2
 alsa-utils 1.2.5.1-1
 autoconf 2.71-1
-automake 1.16.3-1
+automake 1.16.4-1
 autotiling 1.5-1
 aws-cli 1.20.2-1
 base 2-2
 bison 3.7.6-1
-borgmatic 1.5.17-1
+borgmatic 1.5.18-1
 bpytop 1.0.67-1
 bugwarrior 1.8.0-1
 calibre 5.23.0-2
