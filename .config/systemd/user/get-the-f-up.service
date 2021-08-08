@@ -1,0 +1,9 @@
+[Unit]
+Description=Notify self to stand up and stretch
+
+[Service]
+Environment="DISPLAY=:0"
+ExecStart=/usr/bin/dunstify "Get up!" "Stretch your legs, drink some water, take a 5 min break"
+
+[Install]
+WantedBy=default.target
