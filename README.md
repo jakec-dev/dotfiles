@@ -10,7 +10,7 @@ As on: 08 August 2021
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.8-arch1-1 
-Packages: 1006 (pacman) 
+Packages: 1007 (pacman) 
 Shell: bash 5.1.8 
 Resolution: 2560x1440 @ 165.00Hz 
 WM: i3 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 3.42GiB / 15.56GiB 
+Memory: 2.84GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -42,6 +42,7 @@ docker 1:20.10.8-1
 dracula-gtk-theme 2021.06.30-1
 dunst 1.6.1-2
 element-desktop 1.7.34-1
+eww-git 8556e15_2021.07.31_-1
 ffmpegthumbnailer 2.2.2-2
 firefox 90.0.2-1
 flex 2.6.4-3

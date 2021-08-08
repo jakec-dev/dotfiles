@@ -14,5 +14,5 @@ get_report_uuids() {
 child_uuids=$(task _get $1.depends)
 if [[ ! -z $child_uuids ]]; then
     get_report_uuids "$child_uuids"
-    task $report_uuids next; $SHELL
+    task $report_uuids \(status:pending or status:waiting or status:active\) list; $SHELL
 fi
