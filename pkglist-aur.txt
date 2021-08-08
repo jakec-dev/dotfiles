@@ -1,6 +1,7 @@
 autotiling
 bugwarrior
 dracula-gtk-theme
+eww-git
 freetube-bin
 freezer-bin
 i3-swallow

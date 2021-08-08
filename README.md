@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 2.84GiB / 15.56GiB 
+Memory: 2.85GiB / 15.56GiB 
 ```
 
 ## Installed Apps
