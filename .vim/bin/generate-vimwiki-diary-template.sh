@@ -16,7 +16,7 @@ echo -e "# $page_title
     - [Due Today](#Due Today | +TODAY -OVERDUE and -sod and -eod)
     - [Routines](#Routines)
         - [Start of Day](#Start of Day | +sod and +TODAY)
-        - [End of Day](#End of Day | +eod and +TODAY)$([[ is_eow ]] && echo -e "
+        - [End of Day](#End of Day | +eod and +TODAY)$([[ $is_eow == true ]] && echo -e "
         - [End of Week](#End of Week | +eow and +TODAY)")
 - [Reference](#Reference)
     - [Active Projects](#Active Projects | +next and status:pending and -sod and -eod and (project.none: or description:PROJ\))
@@ -39,11 +39,10 @@ $($SCRIPTS_HOME/system/reminder.sh)
 #### Start of Day | +sod and +TODAY
 
 #### End of Day | +eod and +TODAY
-$([[ is_eow ]] && echo -e "
+$([[ $is_eow == true ]] && echo -e "
 #### End of Week | +eow and +TODAY
 
 ")
-
 ## Reference
 
 ### Active Projects | +next and status:pending and -sod and -eod and (project.none: or description:PROJ)
