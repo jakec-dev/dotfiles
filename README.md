@@ -6,7 +6,7 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 08 August 2021 
+As on: 09 August 2021 
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.8-arch1-1 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 2.85GiB / 15.56GiB 
+Memory: 3.72GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -71,7 +71,7 @@ neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-6
 nfs-utils 2.5.4-1
 numlockx 1.2-5
-nvidia 470.57.02-8
+nvidia 470.57.02-9
 p7zip 1:17.04-1
 pacman-contrib 1.4.0-4
 pandoc 2.14.0.2-2
@@ -93,7 +93,7 @@ smartmontools 7.2-1
 sonarr 3.0.6.1266-1
 source-highlight 3.1.9-5
 steam 1.0.0.71-1
-streamlink-twitch-gui 1.11.0-1
+streamlink-twitch-gui 1.12.0-1
 sxiv 26-1
 syncthing 1.18.1-1
 tasksh 1.2.0-2
@@ -117,7 +117,7 @@ timew 1.4.3-2
 tldr 2.0.0-1
 ttf-font-awesome 5.15.4-1
 ttf-roboto 2.138-4
-tutanota-desktop 3.85.6-1
+tutanota-desktop 3.85.10-1
 udiskie 2.3.3-1
 ueberzug 18.1.9-2
 unrar 1:6.0.7-1

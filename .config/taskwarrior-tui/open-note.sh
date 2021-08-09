@@ -2,6 +2,7 @@
 
 task_uuid="$@"
 task_project="$(task _get $task_uuid.project)"
+task_parent="$(task _get $task_uuid.parent)"
 
 if [[ $task_project ]]; then
     file_name="$(task project:$task_project +project uuids)"
@@ -12,6 +13,11 @@ if [[ $task_project ]]; then
         \n\n## Waiting | status:waiting \
         \n\n## Future | -VISIBLE  \
         \n\n## Completed | status:completed \
+        \n\n## Notes"
+elif [[ $task_parent ]]; then
+    file_name=$task_parent
+    file_heading="$(task _get $task_parent.description)"
+    file_template="# $file_heading \
         \n\n## Notes"
 else
     file_name=$task_uuid
