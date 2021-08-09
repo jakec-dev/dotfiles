@@ -57,7 +57,7 @@ context.work=+@work
 # Inbox report
 report.in.columns           = id,description
 report.in.description       = Inbox
-report.in.filter            = status:pending (+inbox) rc.context:none
+report.in.filter            = status:pending (+inbox)
 report.in.labels            = ID,Description
 
 # `+next` report
