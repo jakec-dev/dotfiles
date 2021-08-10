@@ -4,7 +4,9 @@ dracula-gtk-theme
 eww-git
 freetube-bin
 freezer-bin
+gollum
 i3-swallow
+jackett
 jellyfin
 lf
 mullvad-vpn
@@ -12,6 +14,7 @@ nerd-fonts-complete
 picom-git
 polybar
 radarr
+readarr-nightly
 rofi-bluetooth-git
 simple-mtpfs
 sonarr

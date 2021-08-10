@@ -6,11 +6,11 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 09 August 2021 
+As on: 10 August 2021 
 --------------------- 
 OS: Arch Linux 
-Kernel: 5.13.8-arch1-1 
-Packages: 1007 (pacman) 
+Kernel: 5.13.9-arch1-1 
+Packages: 1064 (pacman) 
 Shell: bash 5.1.8 
 Resolution: 2560x1440 @ 165.00Hz 
 WM: i3 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 4.88GiB / 15.56GiB 
+Memory: 5.19GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -36,7 +36,6 @@ bison 3.7.6-1
 borgmatic 1.5.18-1
 bpytop 1.0.67-1
 bugwarrior 1.8.0-1
-calibre 5.23.0-2
 dnscrypt-proxy 2.0.45-2
 docker 1:20.10.8-1
 dracula-gtk-theme 2021.06.30-1
@@ -51,6 +50,7 @@ freezer-bin 1.1.24-1
 geoip 1.6.12-2
 gimp 2.10.24-6
 gnu-netcat 0.7.1-8
+gollum 5.2.3-1
 grub 2:2.06-1
 gufw 21.04.0-1
 i3-swallow 2021.01.01-2
@@ -62,7 +62,7 @@ jq 1.6-4
 kitty 0.22.2-1
 lf 24-1
 libreoffice-still 7.0.6-4
-lynx 2.8.9-3
+lynx 2.8.9-4
 make 4.3-3
 man-db 2.9.4-2
 mpv 1:0.33.1-2
@@ -83,8 +83,8 @@ picom-git 1593_Next.31.gd9c9742_2021.06.09-1
 pkgconf 1.7.3-1
 polybar 3.5.6-1
 pulsemixer 1.5.1-2
-qbittorrent 4.3.6-1
 radarr 3.2.2.5080-1
+readarr-nightly 0.1.0.919-1
 redshift 1.12-4
 rofi-bluetooth-git r20.893db1f-1
 rofi-calc 2.0.0-1
