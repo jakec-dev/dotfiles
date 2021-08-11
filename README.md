@@ -6,7 +6,7 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 10 August 2021 
+As on: 11 August 2021 
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.9-arch1-1 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 5.19GiB / 15.56GiB 
+Memory: 1.70GiB / 15.56GiB 
 ```
 
 ## Installed Apps

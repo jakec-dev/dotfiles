@@ -71,7 +71,7 @@ prjco() {
 
 # calendar
 alias remind="$SCRIPTS_HOME/system/reminder.sh"
-alias rem="echo REM $@ >> ~/Documents/Sync/.reminders/cli.rem"
+alias rem="echo REM ${@}% >> ~/Documents/Sync/.reminders/cli.rem"
 alias rem-edit="$EDITOR ~/Documents/Sync/.reminders/cli.rem"
 
 # app shortcuts
