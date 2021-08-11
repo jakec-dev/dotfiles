@@ -199,7 +199,8 @@ for_window [title="^Steam Keyboard$"] floating enable
 
 # default window widths
 for_window [class="^narrowTerminal$"] resize set 30 ppt
-for_window [class="^floating"] resize set 80 ppt 80 ppt
+for_window [class="^floatingKitty$"] resize set 80 ppt 80 ppt
+for_window [class="^scratchpad"] resize set 80 ppt 80 ppt
 
 # class                 border  bground text    indicator child_border
 client.focused          #8be9fd #6272A4 #F8F8F2 #8be9fd   #8be9fd
