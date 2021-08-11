@@ -25,4 +25,5 @@ vim-coc
 vim-vimwiki
 virtualbox-ext-oracle
 wyrd-git
+xgetres
 yay

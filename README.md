@@ -6,11 +6,11 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 11 August 2021 
+As on: 12 August 2021 
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.9-arch1-1 
-Packages: 1064 (pacman) 
+Packages: 1065 (pacman) 
 Shell: bash 5.1.8 
 Resolution: 2560x1440 @ 165.00Hz 
 WM: i3 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 3.04GiB / 15.56GiB 
+Memory: 4.29GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -43,7 +43,7 @@ dunst 1.6.1-2
 element-desktop 1.7.34-1
 eww-git 8556e15_2021.07.31_-1
 ffmpegthumbnailer 2.2.2-2
-firefox 90.0.2-1
+firefox 91.0-1
 flex 2.6.4-3
 freetube-bin 0.13.2-1
 freezer-bin 1.1.24-1
@@ -130,6 +130,7 @@ virtualbox-ext-oracle 6.1.26-1
 wyrd-git 20210805.45f1557-1
 xcursor-comix 0.9.2-1
 xdg-user-dirs 0.17-3
+xgetres 1.0-1
 xorg-xinit 1.4.1-3
 yay 10.3.1-1
 ```
