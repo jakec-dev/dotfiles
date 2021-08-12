@@ -1,19 +1,19 @@
 #!/bin/bash
 
-color_empty="#50fa7b"
-color_not_empty="#ff5555"
-
-################
-# Number of items in trash can
-################
+color_ok=$(xgetres color2)
+color_attention=$(xgetres color1)
 
 function count_trash() {
     trash_count=$(trash-list | wc -l)
     if [[ $trash_count > 0 ]]; then
-        echo "%{F$color_not_empty} $trash_count"
+        echo "%{F$color_attention} $trash_count"
     else
-        echo "%{F$color_empty}"
+        echo "%{F$color_ok}"
     fi
 }
 
-count_trash
+case "$1" in
+    *)
+        count_trash
+        ;;
+esac

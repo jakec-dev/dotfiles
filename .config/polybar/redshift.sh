@@ -1,22 +1,19 @@
 #!/bin/bash
 
-# Redshift module for polybar 
+color_ok=$(xgetres color2)
+color_attention=$(xgetres color1)
+redshift_status=$(systemctl --user is-active redshift)
 
-COLOR_ACTIVE="#50fa7b"
-COLOR_INACTIVE="#ff5555"
-
-R_STATUS="$(systemctl --user is-active redshift)"
-
-check_status() {
-    if [ "$R_STATUS" == "active" ]; then
-        echo "%{F$COLOR_ACTIVE}"
+function check_status() {
+    if [ $redshift_status == "active" ]; then
+        echo "%{F$color_ok}"
     else
-        echo "%{F$COLOR_INACTIVE}"
+        echo "%{F$color_attention}"
     fi
 }
 
-toggle_redshift() {
-    if [ "$R_STATUS" == "active" ]; then
+function toggle_redshift() {
+    if [ $redshift_status == "active" ]; then
         systemctl --user stop redshift
     else
         systemctl --user start redshift
@@ -24,6 +21,10 @@ toggle_redshift() {
 }
 
 case "$1" in
-    toggle) toggle_redshift ;;
-    *) check_status ;;
+    toggle) 
+        toggle_redshift 
+        ;;
+    *) 
+        check_status 
+        ;;
 esac

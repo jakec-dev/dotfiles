@@ -1,12 +1,12 @@
 #!/bin/bash
 
-readonly color_ok="#50fa7b"
-readonly color_alert="#ff5555"
+color_ok=$(xgetres color2)
+color_attention=$(xgetres color1)
 
-function poly_output() {
+function check_status() {
     is_paused=$(dunstctl is-paused)
     if [[ $is_paused == true ]]; then
-        echo "%{F$color_alert}"
+        echo "%{F$color_attention}"
     else
         echo "%{F$color_ok}"
     fi
@@ -20,6 +20,6 @@ case "$1" in
         dunstctl history-pop
         ;;
     output)
-        poly_output
+        check_status
         ;;
 esac

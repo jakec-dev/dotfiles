@@ -7,7 +7,6 @@ primary = #8be9fd
 secondary = #ff79c6
 alert = #ff5555
 success = #50fa7b
-;app = #ffb86c
 app = ${colors.primary}
 
 [settings]
@@ -38,7 +37,6 @@ font-1 = Font Awesome 5 Brands:style=Regular:pixelsize=10;3
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=10;3
 font-3 = Font Awesome 5 Free:style=Regular:pixelsize=10;3
 modules-left = app-launcher i3 new-workspace xwindow
-;modules-center = news
 modules-right =  terminal file-manager notes tui tasks-inbox package-updates dotfiles trash alerts redshift volume time power-menu
 wm-restack = i3
 cursor-click = pointer
@@ -96,24 +94,6 @@ format-padding = 0
 format-underline =
 format-background =
 
-;[module/news]
-;type = custom/script
-;exec = $XDG_CONFIG_HOME/polybar/news/news-feed.sh
-;interval = 180
-;click-left = $XDG_CONFIG_HOME/polybar/news/news-feed.sh url
-;click-middle = $XDG_CONFIG_HOME/polybar/news/news-feed.sh download
-;click-right = $TERMINAL --class floatingKitty -e newsboat &
-;format-prefix = " " 
-;format-underline =
-;format-background =
-
-;[module/open-web]
-;type = custom/script
-;exec = echo  web
-;click-left = $BROWSER &
-;format-foreground = ${colors.app}
-;format-underline = ${colors.app}
-
 [module/terminal]
 type = custom/script
 exec = echo 
@@ -121,13 +101,6 @@ click-left = $TERMINAL --class=floatingKitty
 click-right = $XDG_CONFIG_HOME/polybar/open-terminal.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
-
-;[module/calculator]
-;type = custom/script
-;exec = echo 
-;click-left = rofi -show calc -modi calc -no-show-match -no-sort -display-calc "" &
-;format-foreground = ${colors.app}
-;format-underline = ${colors.app}
 
 [module/file-manager]
 type = custom/script
@@ -153,36 +126,12 @@ click-right = $XDG_CONFIG_HOME/polybar/open-tasks.sh
 format-foreground = ${colors.app}
 format-underline = ${colors.app}
 
-;[module/bluetooth]
-;type = custom/script
-;exec = rofi-bluetooth --status
-;interval = 5 
-;click-left = rofi-bluetooth & 
-;format-foreground = #8be9fd
-
 [module/redshift]
 type = custom/script
 exec = $XDG_CONFIG_HOME/polybar/redshift.sh
 click-left = $XDG_CONFIG_HOME/polybar/redshift.sh toggle
 interval = 5
 format = <label>
-
-;[module/wifi]
-;type = internal/network
-;interface = wlp6s0
-;click-left = $XDG_CONFIG_HOME/polybar/network_manager.sh &
-;interval = 3
-;format = <label>
-;label-connected = 
-;label-connected-foreground = ${colors.success}
-
-;[module/vpn]
-;type = custom/script
-;exec = $XDG_CONFIG_HOME/polybar/vpn.sh
-;click-right = $XDG_CONFIG_HOME/polybar/vpn.sh --toggle-connection &
-;click-left = $XDG_CONFIG_HOME/polybar/vpn.sh --location-menu &
-;interval = 5
-;format = <label>
 
 [module/package-updates]
 type = custom/script

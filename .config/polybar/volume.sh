@@ -7,10 +7,10 @@
 
 # Defaults for configurable values, expected to be set by command-line arguments
 AUTOSYNC="no"
-COLOR_MUTED="%{F#6b6b6b}"
+COLOR_MUTED="%{F$(xgetres color1)}"
 ICON_MUTED=
 ICON_SINK=
-NOTIFICATIONS="no"
+NOTIFICATIONS="yes"
 OSD="no"
 SINK_NICKNAMES_PROP=
 VOLUME_STEP=2
@@ -18,7 +18,7 @@ VOLUME_MAX=130
 # shellcheck disable=SC2016
 
 
-FORMAT='$VOL_ICON ${VOL_LEVEL}%  $ICON_SINK $SINK_NICKNAME'
+FORMAT='$VOL_ICON ${VOL_LEVEL}% $SINK_NICKNAME'
 declare -A SINK_NICKNAMES
 declare -a ICONS_VOLUME
 declare -a SINK_BLACKLIST
@@ -72,6 +72,10 @@ function getNickname() {
 
     if [ -z "$SINK_NICKNAME" ]; then
         SINK_NICKNAME="Sink #$1"
+    fi
+
+    if [[ $SINK_NICKNAME == "Speakers" ]]; then
+        SINK_NICKNAME=
     fi
 }
 
@@ -326,14 +330,14 @@ function output() {
     if [ "$isMuted" = "yes" ]; then
         # shellcheck disable=SC2034
         VOL_ICON=$ICON_MUTED
-        echo "${COLOR_MUTED}$(eval echo "$FORMAT")${END_COLOR}"
+        echo "${COLOR_MUTED}${VOL_ICON}${END_COLOR}"
     else
         if [ $VOL_LEVEL -eq 100 ]; then
-            OUTPUT_COLOR="%{F#50fa7b}"
+            OUTPUT_COLOR="%{F$(xgetres color2)}"
         elif [ $VOL_LEVEL -gt 100 ]; then
-            OUTPUT_COLOR="%{F#ff5555}"
+            OUTPUT_COLOR="%{F$(xgetres color1)}"
         else
-            OUTPUT_COLOR="%{F#f1fa8c}"
+            OUTPUT_COLOR="%{F$(xgetres color3)}"
         fi
         echo "${OUTPUT_COLOR}$(eval echo "$FORMAT")${END_COLOR}"
     fi

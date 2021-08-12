@@ -1,7 +1,7 @@
 #!/bin/bash
 
-color_ok="#50fa7b"
-color_attention="#ff5555"
+color_ok=$(xgetres color2)
+color_attention=$(xgetres color1)
 
 function count_unstaged() {
     unstaged_count=$(git --git-dir=$HOME/.cfg/ --work-tree=$HOME status -s -uno | wc -l)
@@ -11,4 +11,9 @@ function count_unstaged() {
         echo "%{F$color_ok}"
     fi
 }
-count_unstaged
+
+case "$1" in
+    *) 
+        count_unstaged
+        ;;
+esac
