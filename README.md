@@ -6,7 +6,7 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 12 August 2021 
+As on: 13 August 2021 
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.9-arch1-1 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 5.36GiB / 15.56GiB 
+Memory: 2.38GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -71,7 +71,7 @@ neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-6
 nfs-utils 2.5.4-1
 numlockx 1.2-5
-nvidia 470.57.02-9
+nvidia 470.63.01-1
 p7zip 1:17.04-1
 pacman-contrib 1.4.0-4
 pandoc 2.14.0.2-2
