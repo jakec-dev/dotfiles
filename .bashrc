@@ -63,6 +63,9 @@ alias tui="taskwarrior-tui"
 alias in="task add +inbox"
 alias inbox="tui --report=in"
 alias sch="task due:today status.any: next"
+cbf() {
+    task $@ annotate "CBF" wait:tomorrow
+}
 prjco() {
     [[ $3 ]] && { echo "Too many arguments provided"; return 1; }
     [[ ! $2 ]] && { echo "Not enough arguments. Format is 'prjco \"<project>\" <coefficient>"; return 1; }
