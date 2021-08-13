@@ -12,6 +12,7 @@ echo -e "# $page_title
 
 - [What's On](#What's On)
     - [Calendar](#Calendar)
+    - [Scheduled](#Scheduled | scheduled:today and -sod and -eod and -eow)
     - [Overdue](#Overdue | +OVERDUE)
     - [Due Today](#Due Today | +TODAY -OVERDUE and -sod and -eod)
     - [Routines](#Routines)
@@ -30,9 +31,11 @@ echo -e "# $page_title
 
 $($SCRIPTS_HOME/system/reminder.sh)
 
+### Scheduled | scheduled:today and -sod and -eod and -eow
+
 ### Overdue | +OVERDUE
 
-### Due Today | +TODAY -OVERDUE and -sod and -eod and -eow
+### Due Today | +TODAY and -OVERDUE and -sod and -eod and -eow
 
 ### Routines
 
