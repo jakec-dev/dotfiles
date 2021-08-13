@@ -55,17 +55,31 @@ context.home=+@home
 context.work=+@work
 
 # Inbox report
-report.in.columns           = id,description
-report.in.description       = Inbox
-report.in.filter            = status:pending (+inbox)
-report.in.labels            = ID,Description
+report.in.columns=id,description
+report.in.description=Inbox
+report.in.filter=status:pending (+inbox)
+report.in.labels=ID,Description
 
-# `+next` report
-report.nx.description=Next steps
+# Next Actions report
+report.nx.description=Next Actions
 report.nx.filter=status:pending (+next)
 report.nx.sort=urgency-,project+
-report.nx.columns=urgency,priority,estimate,energy,scheduled.countdown,due.relative,project,description
-report.nx.labels=Urgency,Pri,Est,Energy,Sch,Due,Project,Description
+report.nx.columns=id,urgency,priority,estimate,energy,scheduled.countdown,due.relative,project,description
+report.nx.labels=ID,Urgency,Pri,Est,Energy,Sch,Due,Project,Description
+
+# Waiting report
+report.wt.description=Waiting
+report.wt.filter=+WAITING
+report.wt.sort=project+,wait+,urgency-,project+
+report.wt.columns=id,wait,wait.remaining,urgency,priority,recur,scheduled.countdown,due.relative,project,description
+report.wt.labels=ID,Wait,Remaining,Urgency,Pri,Recur,Sch,Due,Project,Description
+
+## Later report
+report.lr.description=Later
+report.lr.filter=(+later or wait:later) and status.not:completed and status.not:deleted
+report.lr.sort=entry-
+report.lr.columns=id,project,description
+report.lr.labels=ID,Project,Description
 
 # UDAs
 uda.estimate.type=numeric
@@ -73,14 +87,13 @@ uda.estimate.label=Estimate
 uda.energy.type=string
 uda.energy.label=Energy
 uda.energy.values=0,1,2,3,4,5
-uda.energy.default=3
-uda.notes.type=string
-uda.notes.label=Notes
 
 # Taskwarrior-tui
 uda.taskwarrior-tui.task-report.next.filter=status:pending
-uda.taskwarrior-tui.shortcuts.1=~/.config/taskwarrior-tui/task-inbox.sh
-uda.taskwarrior-tui.shortcuts.2=~/.config/taskwarrior-tui/task-next-steps.sh
+uda.taskwarrior-tui.shortcuts.1=~/.config/taskwarrior-tui/report-inbox.sh
+uda.taskwarrior-tui.shortcuts.2=~/.config/taskwarrior-tui/report-next-actions.sh
+uda.taskwarrior-tui.shortcuts.3=~/.config/taskwarrior-tui/report-waiting.sh
+uda.taskwarrior-tui.shortcuts.4=~/.config/taskwarrior-tui/report-later.sh
 uda.taskwarrior-tui.shortcuts.7=~/.config/taskwarrior-tui/filter-project.sh
 uda.taskwarrior-tui.shortcuts.8=~/.config/taskwarrior-tui/filter-all-child-tasks.sh
 uda.taskwarrior-tui.shortcuts.9=~/.config/taskwarrior-tui/open-note.sh
