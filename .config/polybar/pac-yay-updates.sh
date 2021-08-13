@@ -37,7 +37,7 @@ function check_updates() {
 
 case "$1" in
     update)
-        $TERMINAL --class="floatingKitty" bash -c "sudo pacman -Syu; yay -Syu"
+        $TERMINAL --class="floatingKitty" bash -c "sudo pacman -Syu; yay -Syu --answerclean yes --nodiffmenu --removemake"
         ;;
     *) 
         check_updates 
