@@ -46,6 +46,7 @@ $([[ $is_eow == true ]] && echo -e "
 #### End of Week | +eow and +TODAY
 
 ")
+
 ## Reference
 
 ### Active Projects | +next and status:pending and -sod and -eod and (project.none: or description:PROJ)
