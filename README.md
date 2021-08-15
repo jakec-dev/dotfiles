@@ -6,11 +6,11 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 13 August 2021 
+As on: 15 August 2021 
 --------------------- 
 OS: Arch Linux 
-Kernel: 5.13.9-arch1-1 
-Packages: 1065 (pacman) 
+Kernel: 5.13.10-arch1-1 
+Packages: 1097 (pacman) 
 Shell: bash 5.1.8 
 Resolution: 2560x1440 @ 165.00Hz 
 WM: i3 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 3.05GiB / 15.56GiB 
+Memory: 4.05GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -40,6 +40,7 @@ dnscrypt-proxy 2.0.45-2
 docker 1:20.10.8-1
 dracula-gtk-theme 2021.06.30-1
 dunst 1.6.1-2
+easyeffects 6.0.3-2
 element-desktop 1.7.34-1
 eww-git 8556e15_2021.07.31_-1
 ffmpegthumbnailer 2.2.2-2
@@ -47,6 +48,7 @@ firefox 91.0-1
 flex 2.6.4-3
 freetube-bin 0.13.2-1
 freezer-bin 1.1.24-1
+fzf 0.27.2-1
 geoip 1.6.12-2
 gimp 2.10.24-6
 gnu-netcat 0.7.1-8
@@ -71,7 +73,7 @@ neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-6
 nfs-utils 2.5.4-1
 numlockx 1.2-5
-nvidia 470.63.01-1
+nvidia 470.63.01-2
 p7zip 1:17.04-1
 pacman-contrib 1.4.0-4
 pandoc 2.14.0.2-2
@@ -84,7 +86,7 @@ pkgconf 1.7.3-1
 polybar 3.5.6-1
 pulsemixer 1.5.1-2
 radarr 3.2.2.5080-1
-readarr-nightly 0.1.0.919-1
+readarr-nightly 0.1.0.929-1
 redshift 1.12-4
 rofi-bluetooth-git r20.893db1f-1
 rofi-calc 2.0.0-1

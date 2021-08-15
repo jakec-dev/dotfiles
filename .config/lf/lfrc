@@ -108,6 +108,18 @@ map ae extract
 map az zip
 map ar tar
 
+cmd fzf_jump ${{
+    res="$(find . | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ]; then
+        cmd="cd"
+    else
+        cmd="select"
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+map <c-f> :fzf_jump
+map f $vi $(fzf)
+
 # Bookmarks
 map gc cd ~/.config/
 map gs cd ~/.scripts/
