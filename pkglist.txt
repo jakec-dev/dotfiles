@@ -17,6 +17,7 @@ dmenu
 dnscrypt-proxy
 docker
 dunst
+easyeffects
 efibootmgr
 element-desktop
 fakeroot
@@ -25,6 +26,7 @@ file
 findutils
 firefox
 flex
+fzf
 gawk
 gcc
 geoip
@@ -79,8 +81,9 @@ patch
 perl-anyevent-i3
 perl-image-exiftool
 perl-json-xs
+pipewire
+pipewire-pulse
 pkgconf
-pulseaudio
 pulsemixer
 python-llfuse
 python-pip
