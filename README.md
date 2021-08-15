@@ -6,7 +6,7 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 15 August 2021 
+As on: 16 August 2021 
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.10-arch1-1 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 4.05GiB / 15.56GiB 
+Memory: 8.51GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -80,13 +80,13 @@ pandoc 2.14.0.2-2
 papirus-icon-theme 20210802-1
 parallel 20200322-1
 patch 2.7.6-8
-perl-image-exiftool 12.26-2
+perl-image-exiftool 12.30-1
 picom-git 1593_Next.31.gd9c9742_2021.06.09-1
 pkgconf 1.7.3-1
 polybar 3.5.6-1
 pulsemixer 1.5.1-2
 radarr 3.2.2.5080-1
-readarr-nightly 0.1.0.929-1
+readarr-nightly 0.1.0.935-1
 redshift 1.12-4
 rofi-bluetooth-git r20.893db1f-1
 rofi-calc 2.0.0-1
