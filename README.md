@@ -6,7 +6,7 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 16 August 2021 
+As on: 17 August 2021 
 --------------------- 
 OS: Arch Linux 
 Kernel: 5.13.10-arch1-1 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 8.50GiB / 15.56GiB 
+Memory: 3.13GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -30,7 +30,7 @@ alsa-utils 1.2.5.1-1
 autoconf 2.71-1
 automake 1.16.4-1
 autotiling 1.5-1
-aws-cli 1.20.2-1
+aws-cli 1.20.21-1
 base 2-2
 bison 3.7.6-1
 borgmatic 1.5.18-1
@@ -61,7 +61,7 @@ intel-ucode 20210608-1
 java-runtime-common 3-3
 jellyfin 10.7.6-1
 jq 1.6-4
-kitty 0.22.2-1
+kitty 0.23.0-1
 lf 24-1
 libreoffice-still 7.0.6-4
 lynx 2.8.9-4
@@ -99,7 +99,7 @@ streamlink-twitch-gui 1.12.0-1
 sxiv 26-1
 syncthing 1.18.1-1
 tasksh 1.2.0-2
-taskwarrior-tui 0.13.29-1
+taskwarrior-tui 0.13.32-1
 texlive-bibtexextra 2021.58697-1
 texlive-fontsextra 2021.58704-1
 texlive-formatsextra 2021.57972-1

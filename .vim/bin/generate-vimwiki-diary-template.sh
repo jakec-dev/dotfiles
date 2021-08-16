@@ -9,9 +9,9 @@ echo -e "# $page_title
 
 $($SCRIPTS_HOME/system/reminder.sh)
 
-## Schedule | (scheduled:today or due:today) and -sod and -eod and -eow
+## Schedule | (scheduled:today or due:today) and status:pending and -sod and -eod and -eow
 
-## Routines | +TODAY and (+sod or +eod or +eow)
+## Routines | +TODAY and -OVERDUE and (+sod or +eod or +eow)
 
 ## Overdue | +OVERDUE
 
