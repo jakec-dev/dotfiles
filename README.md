@@ -6,10 +6,10 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 17 August 2021 
+As on: 22 August 2021 
 --------------------- 
 OS: Arch Linux 
-Kernel: 5.13.10-arch1-1 
+Kernel: 5.13.12-arch1-1 
 Packages: 1097 (pacman) 
 Shell: bash 5.1.8 
 Resolution: 2560x1440 @ 165.00Hz 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 3.13GiB / 15.56GiB 
+Memory: 3.15GiB / 15.56GiB 
 ```
 
 ## Installed Apps
@@ -40,11 +40,11 @@ dnscrypt-proxy 2.0.45-2
 docker 1:20.10.8-1
 dracula-gtk-theme 2021.06.30-1
 dunst 1.6.1-2
-easyeffects 6.0.3-2
+easyeffects 6.1.0-1
 element-desktop 1.7.34-1
 eww-git 8556e15_2021.07.31_-1
 ffmpegthumbnailer 2.2.2-2
-firefox 91.0-1
+firefox 91.0.1-1
 flex 2.6.4-3
 freetube-bin 0.13.2-1
 freezer-bin 1.1.24-1
@@ -61,7 +61,7 @@ intel-ucode 20210608-1
 java-runtime-common 3-3
 jellyfin 10.7.6-1
 jq 1.6-4
-kitty 0.23.0-1
+kitty 0.23.1-1
 lf 24-1
 libreoffice-still 7.0.6-4
 lynx 2.8.9-4
@@ -73,11 +73,11 @@ neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-6
 nfs-utils 2.5.4-1
 numlockx 1.2-5
-nvidia 470.63.01-2
+nvidia 470.63.01-3
 p7zip 1:17.04-1
 pacman-contrib 1.4.0-4
 pandoc 2.14.0.2-2
-papirus-icon-theme 20210802-1
+papirus-icon-theme 20210802-2
 parallel 20200322-1
 patch 2.7.6-8
 perl-image-exiftool 12.30-1
@@ -86,7 +86,7 @@ pkgconf 1.7.3-1
 polybar 3.5.6-1
 pulsemixer 1.5.1-2
 radarr 3.2.2.5080-1
-readarr-nightly 0.1.0.935-1
+readarr-nightly 0.1.0.943-1
 redshift 1.12-4
 rofi-bluetooth-git r20.893db1f-1
 rofi-calc 2.0.0-1
@@ -99,7 +99,7 @@ streamlink-twitch-gui 1.12.0-1
 sxiv 26-1
 syncthing 1.18.1-1
 tasksh 1.2.0-2
-taskwarrior-tui 0.13.32-1
+taskwarrior-tui 0.13.33-1
 texlive-bibtexextra 2021.58697-1
 texlive-fontsextra 2021.58704-1
 texlive-formatsextra 2021.57972-1
@@ -119,7 +119,7 @@ timew 1.4.3-2
 tldr 2.0.0-1
 ttf-font-awesome 5.15.4-1
 ttf-roboto 2.138-4
-tutanota-desktop 3.85.10-1
+tutanota-desktop 3.86.3-1
 udiskie 2.3.3-1
 ueberzug 18.1.9-2
 unrar 1:6.0.7-1
