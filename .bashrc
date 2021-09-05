@@ -79,6 +79,7 @@ alias rem-edit="$EDITOR ~/Documents/Sync/.reminders/cli.rem"
 
 # app shortcuts
 alias phone="cat ~/Documents/phone.txt"
+alias bank="cat ~/Documents/banking.txt"
 alias battlestation="bpytop"
 alias vol="pulsemixer"
 alias bluetooth="bluetoothctl"
