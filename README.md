@@ -6,11 +6,11 @@ My dotfiles for Arch Linux
 
 ```
 jake@JC-PC-ARCH 
-As on: 06 September 2021 
+As on: 28 September 2021 
 ------------------------ 
 OS: Arch Linux 
-Kernel: 5.13.13-arch1-1 
-Packages: 1098 (pacman) 
+Kernel: 5.14.7-arch1-1 
+Packages: 1101 (pacman) 
 Shell: bash 5.1.8 
 Resolution: 2560x1440 @ 165.00Hz 
 WM: i3 
@@ -19,7 +19,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i7-8700K @ 4.7GHz 
 GPU: NVIDIA GeForce GTX 1080 Ti 
-Memory: 3.06GiB / 15.56GiB 
+Memory: 4.30GiB / 15.55GiB 
 ```
 
 ## Installed Apps
@@ -36,45 +36,45 @@ bison 3.7.6-1
 borgmatic 1.5.18-1
 bpytop 1.0.67-1
 bugwarrior 1.8.0-1
-dnscrypt-proxy 2.0.45-2
+dnscrypt-proxy 2.1.0-1
 docker 1:20.10.8-1
 dracula-gtk-theme 2021.06.30-1
 dunst 1.6.1-2
-easyeffects 6.1.0-1
-element-desktop 1.7.34-1
+easyeffects 6.1.2-1
+element-desktop 1.8.5-1
 eww-git 8556e15_2021.07.31_-1
 ffmpegthumbnailer 2.2.2-2
-firefox 91.0.2-1
+firefox 92.0.1-1
 flex 2.6.4-3
-freetube-bin 0.13.2-1
+freetube-bin 0.14.0-1
 freezer-bin 1.1.24-1
 fzf 0.27.2-1
 geoip 1.6.12-2
-gimp 2.10.24-6
+gimp 2.10.28-1
 gnu-netcat 0.7.1-8
 gollum 5.2.3-1
-grub 2:2.06-1
+grub 2:2.06-2
 gufw 21.04.0-1
 i3-swallow 2021.01.01-2
-inotify-tools 3.20.11.0-1
+inotify-tools 3.21.9.5-1
 intel-ucode 20210608-1
 java-runtime-common 3-3
-jellyfin 10.7.6-1
+jellyfin 10.7.7-1
 jq 1.6-4
 kitty 0.23.1-1
 lf 24-1
-libreoffice-still 7.1.5-2
+libreoffice-still 7.1.6-1
 lynx 2.8.9-4
 make 4.3-3
 man-db 2.9.4-2
-mpv 1:0.33.1-2
+mpv 1:0.33.1-3
 mullvad-vpn 2021.4-1
 neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-6
 nfs-utils 2.5.4-1
 numlockx 1.2-5
-nvidia 470.63.01-4
-p7zip 1:17.04-1
+nvidia 470.74-3
+p7zip 1:17.04-3
 pacman-contrib 1.4.0-4
 pandoc 2.14.0.2-2
 papirus-icon-theme 20210901-1
@@ -82,11 +82,11 @@ parallel 20200322-1
 patch 2.7.6-8
 perl-image-exiftool 12.30-1
 picom-git 1593_Next.31.gd9c9742_2021.06.09-1
-pkgconf 1.7.3-1
-polybar 3.5.6-1
+pkgconf 1.8.0-1
+polybar 3.5.7-1
 pulsemixer 1.5.1-2
 radarr 3.2.2.5080-1
-readarr-nightly 0.1.0.963-1
+readarr-nightly 0.1.0.971-1
 redshift 1.12-4
 rofi-bluetooth-git r20.893db1f-1
 rofi-calc 2.0.0-1
@@ -94,10 +94,10 @@ simple-mtpfs 0.4.0-1
 smartmontools 7.2-1
 sonarr 3.0.6.1266-1
 source-highlight 3.1.9-6
-steam 1.0.0.71-1
-streamlink-twitch-gui 1.12.0-1
+steam 1.0.0.72-2
+streamlink-twitch-gui 1.13.0-1
 sxiv 26-1
-syncthing 1.18.1-1
+syncthing 1.18.2-1
 tasksh 1.2.0-2
 taskwarrior-tui 0.13.33-1
 texlive-bibtexextra 2021.58697-1
@@ -119,7 +119,7 @@ timew 1.4.3-2
 tldr 2.0.0-1
 ttf-font-awesome 5.15.4-1
 ttf-roboto 2.138-4
-tutanota-desktop 3.87.1-1
+tutanota-desktop 3.88.3-1
 udiskie 2.3.3-1
 ueberzug 18.1.9-2
 unrar 1:6.0.7-1
