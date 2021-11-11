@@ -7,6 +7,7 @@ base
 bash-completion
 binutils
 bison
+blueman
 bluez
 bluez-utils
 borgmatic
