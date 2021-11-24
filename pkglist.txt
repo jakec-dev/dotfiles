@@ -17,8 +17,6 @@ djvulibre
 dmenu
 dnscrypt-proxy
 docker
-dotnet-sdk
-dotnet-targeting-pack
 dunst
 easyeffects
 efibootmgr
@@ -62,7 +60,6 @@ make
 man-db
 mpv
 neofetch
-netstandard-targeting-pack
 networkmanager
 nfs-utils
 nitrogen
