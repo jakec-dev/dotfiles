@@ -18,6 +18,7 @@ alias sudo="sudo -v; sudo "
 alias ls="ls --human-readable -1 --literal --hide-control-chars --color=auto --group-directories-first --size"
 alias yeet="sudo pacman -Rns"
 alias c="clear"
+alias :q="exit"
 alias q="exit"
 
 # fix ssh issue when using kitty terminal
