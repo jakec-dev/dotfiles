@@ -3,18 +3,23 @@
 - [Task Notes](tasks/index.md)
 - [Diary](diary/diary.md)
 - [System](System)
-- [[Home lab]]
 - [Personal](Personal)
 - [Education](Education/index)
 
 ## Usage
 
 ### Wiki Commands
-| ,ww | Open this page                  |
-| ,wd | Delete currently open wiki file |
-| ,wr | Rename currently open wiki file |
+
+| Command | Description                     |
+| ---     | ---                             |
+| ,ww     | Open this page                  |
+| ,wd     | Delete currently open wiki file |
+| ,wr     | Rename currently open wiki file |
 
 ### Diary Commands
+
+| Command             | Description                  |
+| ---                 | ---                          |
 | ,wi                 | List entries                 |
 | ,w,i                | Generate listings            |
 | ,w,w                | Today                        |
