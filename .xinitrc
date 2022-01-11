@@ -36,4 +36,5 @@ dunst &
 udiskie &
 mullvad-vpn &
 numlockx &
+setxkbmap -option caps:escape
 exec i3

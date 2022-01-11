@@ -40,6 +40,7 @@ let g:markdown_folding = 1
 let g:vimwiki_folding = 'syntax'
 
 vmap <C-c> "+y
+set clipboard=unnamedplus
 
 nnoremap <space> za
 nnoremap j gj

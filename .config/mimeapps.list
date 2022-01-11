@@ -13,4 +13,5 @@ image/jpeg=sxiv.desktop
 image/png=sxiv.desktop
 inode/x-empty=vim.desktop
 text/x-script.python=vim.desktop
+x-scheme-handler/msteams=teams.desktop
 

@@ -13,6 +13,12 @@
     #source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 #fi
 
+# work stuff
+alias sshwork="ssh jclayton@172.16.10.37"
+
+# jakec.dev stuff
+alias sshjake="ssh -i $HOME/jakecdevDockerKey.pem ubuntu@jakec.dev"
+
 # command tweaks
 alias sudo="sudo -v; sudo "
 alias ls="ls --human-readable -1 --literal --hide-control-chars --color=auto --group-directories-first --size"
@@ -20,6 +26,7 @@ alias yeet="sudo pacman -Rns"
 alias c="clear"
 alias :q="exit"
 alias q="exit"
+alias py="python"
 
 # fix ssh issue when using kitty terminal
 # https://wiki.archlinux.org/title/Kitty#Terminal_issues_with_SSH
@@ -62,16 +69,6 @@ PS1='\W > '
 # task management
 alias tui="taskwarrior-tui"
 alias in="task add +inbox"
-alias inbox="tui --report=in"
-alias sch="task due:today status.any: next"
-cbf() {
-    task $@ annotate "CBF" wait:tomorrow
-}
-prjco() {
-    [[ $3 ]] && { echo "Too many arguments provided"; return 1; }
-    [[ ! $2 ]] && { echo "Not enough arguments. Format is 'prjco \"<project>\" <coefficient>"; return 1; }
-    task config "urgency.user.project.$1.coefficient" $2
-}
 
 # calendar
 alias remind="$SCRIPTS_HOME/system/reminder.sh"
@@ -79,24 +76,12 @@ alias rem="echo REM ${@}% >> ~/Documents/Sync/.reminders/cli.rem"
 alias rem-edit="$EDITOR ~/Documents/Sync/.reminders/cli.rem"
 
 # app shortcuts
-alias phone="cat ~/Documents/phone.txt"
-alias bank="cat ~/Documents/banking.txt"
-alias ccard="cat ~/Documents/cc.txt"
-alias battlestation="bpytop"
-alias vol="pulsemixer"
-alias bluetooth="bluetoothctl"
-alias firewall="sudo gufw"
 alias mount-phone="simple-mtpfs phone/"
 alias unmount-phone="fusermount -u phone/"
-alias news="newsboat"
 alias weather="curl wttr.in/'Gold Coast, Australia'"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
-alias vimwiki='vim -c "set nonumber norelativenumber" -c VimwikiIndex'
+alias vimwiki='vim -c VimwikiIndex'
 alias vagrant="TERM=xterm-256color vagrant"
-wiki() {
-    search_term="$(echo "$@" | sed 's/ /+/g')"
-    lynx https://wiki.archlinux.org/index.php?search=${search_term} 
-}
 
 # completion for kitty terminal
 source <(kitty + complete setup bash)
@@ -270,3 +255,8 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

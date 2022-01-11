@@ -26,10 +26,10 @@ function check_updates() {
             count_updates
         done
 
-        # re-check every 30 mins for updates if no update is currently available (to reduce system resource usage)
+        # re-check every 3 hours for updates if no update is currently available (to reduce system resource usage)
         while (( $updates == 0 )); do
             echo "%{F$color_ok}"
-            sleep 1800
+            sleep 10800
             count_updates
         done
     done
