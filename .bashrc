@@ -13,6 +13,9 @@
     #source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 #fi
 
+# FIX THIS SHIT!
+alias mountgames="sudo mount -t ntfs /dev/sda2 /media/games; sudo chmod 777 /media/games;"
+
 # work stuff
 alias sshwork="ssh jclayton@172.16.10.37"
 
