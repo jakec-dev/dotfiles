@@ -8,6 +8,8 @@ set directory=~/.cache/vim/swap//
 
 hi LineNr ctermfg=DarkGrey
 
+set list listchars=tab:>-,trail:~,extends:>,precedes:<
+
 filetype plugin on
 filetype indent on
 
