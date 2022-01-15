@@ -11,9 +11,9 @@ As on: 16 January 2022
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
 Kernel: 5.16.0-arch1-1 
-Packages: 713 (pacman) 
+Packages: 718 (pacman) 
 Shell: bash 5.1.16 
-Resolution: 2560x1440 @ 59.95Hz 
+Resolution: 2560x1440 @ 165.00Hz 
 DE: xinitrc 
 WM: i3 
 Theme: Dracula [GTK3] 
@@ -21,7 +21,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 2.80GiB / 31.22GiB 
+Memory: 2.37GiB / 31.22GiB 
 ```
 
 ## Installed Apps
@@ -63,6 +63,7 @@ picom 8.2-1
 pkgconf 1.8.0-1
 polybar 3.5.7-2
 pulsemixer 1.5.1-3
+python-tasklib 2.4.3-3
 qbittorrent 4.4.0-2
 redshift 1.12-5
 remind 3.3.10-1

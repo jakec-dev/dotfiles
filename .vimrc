@@ -41,6 +41,10 @@ set foldmethod=syntax
 let g:markdown_folding = 1
 let g:vimwiki_folding = 'syntax'
 
+call plug#begin()
+Plug 'tools-life/taskwiki'
+call plug#end()
+
 vmap <C-c> "+y
 set clipboard=unnamedplus
 
