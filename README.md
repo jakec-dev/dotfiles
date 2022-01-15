@@ -5,7 +5,23 @@ My dotfiles for Arch Linux
 ## System
 
 ```
-
+jake@jake-pc-arch 
+As on: 16 January 2022 
+---------------------- 
+OS: Arch Linux 
+Host: B560M AORUS PRO AX -CF 
+Kernel: 5.16.0-arch1-1 
+Packages: 713 (pacman) 
+Shell: bash 5.1.16 
+Resolution: 2560x1440 @ 59.95Hz 
+DE: xinitrc 
+WM: i3 
+Theme: Dracula [GTK3] 
+Icons: Papirus [GTK3] 
+Terminal: git 
+CPU: Intel i5-10400F @ 4.3GHz 
+GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
+Memory: 2.80GiB / 31.22GiB 
 ```
 
 ## Installed Apps
@@ -35,8 +51,8 @@ lightdm-webkit-theme-aether 2.2.2-1
 make 4.3-3
 mpv 1:0.34.1-1
 mullvad-vpn 2021.6-2
+neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-8
-nitrogen 1.6.1-4
 ntp 4.2.8.p15-1
 numlockx 1.2-5
 nvidia 495.46-8
@@ -82,7 +98,6 @@ xorg-x11perf 1.6.1-2
 xorg-xbacklight 1.2.3-2
 xorg-xcmsdb 1.0.5-3
 xorg-xcursorgen 1.0.7-2
-xorg-xdpyinfo 1.3.2-4
 xorg-xdriinfo 1.0.6-2
 xorg-xev 1.2.4-1
 xorg-xgamma 1.0.6-3
