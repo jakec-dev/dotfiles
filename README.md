@@ -6,12 +6,12 @@ My dotfiles for Arch Linux
 
 ```
 jake@jake-pc-arch 
-As on: 16 January 2022 
+As on: 17 January 2022 
 ---------------------- 
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
 Kernel: 5.16.0-arch1-1 
-Packages: 718 (pacman) 
+Packages: 719 (pacman) 
 Shell: bash 5.1.16 
 Resolution: 2560x1440 @ 165.00Hz 
 DE: xinitrc 
@@ -21,7 +21,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 2.37GiB / 31.22GiB 
+Memory: 0.75GiB / 31.22GiB 
 ```
 
 ## Installed Apps
@@ -44,6 +44,7 @@ google-chrome 97.0.4692.71-1
 grub 2:2.06-3
 i3-swallow-git r66.7a9faed-1
 imapsync 1.977-1
+inetutils 2.2-1
 jq 1.6-4
 kitty 0.24.1-1
 lf 26-1
