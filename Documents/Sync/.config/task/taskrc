@@ -32,8 +32,8 @@ report.in.labels=ID,Description
 report.nx.description=Next Actions
 report.nx.filter=status:pending (+next)
 report.nx.sort=urgency-,project+
-report.nx.columns=id,urgency,priority,estimate,energy,scheduled.countdown,due.relative,project,description
-report.nx.labels=ID,Urgency,Pri,Est,Energy,Sch,Due,Project,Description
+report.nx.columns=priority,scheduled.countdown,due.relative,project,description
+report.nx.labels=Pri,Sch,Due,Project,Description
 
 # Waiting report
 report.wt.description=Waiting
@@ -92,3 +92,4 @@ taskd.ca=~/.config/task/ca.cert.pem
 taskd.server=task.jakec.dev:53589
 taskd.credentials=jakec-dev/jake/8f43cf2b-ad82-41fd-9fca-98ee295e83b8
 taskd.trust=strict
+context=work

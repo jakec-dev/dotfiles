@@ -6,12 +6,12 @@ My dotfiles for Arch Linux
 
 ```
 jake@jake-pc-arch 
-As on: 17 January 2022 
+As on: 20 January 2022 
 ---------------------- 
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
-Kernel: 5.16.0-arch1-1 
-Packages: 719 (pacman) 
+Kernel: 5.16.1-arch1-1 
+Packages: 784 (pacman) 
 Shell: bash 5.1.16 
 Resolution: 2560x1440 @ 165.00Hz 
 DE: xinitrc 
@@ -21,7 +21,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 0.75GiB / 31.22GiB 
+Memory: 5.65GiB / 31.22GiB 
 ```
 
 ## Installed Apps
@@ -40,10 +40,10 @@ firefox 96.0.1-1
 flex 2.6.4-3
 forticlient-vpn 7.0.0.0018-1
 freetube-bin 0.15.1-1
-google-chrome 97.0.4692.71-1
-grub 2:2.06-3
+google-chrome 97.0.4692.99-1
+grub 2:2.06-4
 i3-swallow-git r66.7a9faed-1
-imapsync 1.977-1
+imapsync 2.140-1
 inetutils 2.2-1
 jq 1.6-4
 kitty 0.24.1-1
@@ -56,7 +56,7 @@ neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-8
 ntp 4.2.8.p15-1
 numlockx 1.2-5
-nvidia 495.46-8
+nvidia 495.46-9
 packettracer 8.1.0-1
 pacman-contrib 1.4.0-4
 patch 2.7.6-8
@@ -64,6 +64,7 @@ picom 8.2-1
 pkgconf 1.8.0-1
 polybar 3.5.7-2
 pulsemixer 1.5.1-3
+python-poetry 1.1.12-3
 python-tasklib 2.4.3-3
 qbittorrent 4.4.0-2
 redshift 1.12-5
@@ -73,6 +74,8 @@ rofi 1.7.2-1
 steam 1.0.0.74-1
 sxiv 26-1
 taskwarrior-tui 0.18.2-1
+teams 1.4.00.26453-1
+teamviewer 15.25.5-1
 tldr 3.0.0-1
 trash-cli 0.21.10.24-2
 ttf-font-awesome 5.15.4-1
@@ -80,7 +83,7 @@ tutanota-desktop 3.89.25-1
 udiskie 2.4.0-1
 vim-plug 0.10.0-1
 vim-vimwiki 2.5-1
-virtualbox-ext-oracle 6.1.30-1
+virtualbox-ext-oracle 6.1.32-1
 xcursor-comix 0.9.2-1
 xf86-video-vesa 2.5.0-2
 xgetres 1.0-1
