@@ -18,6 +18,7 @@ alias mountgames="sudo mount -t ntfs /dev/sda2 /media/games; sudo chmod 777 /med
 
 # work stuff
 alias sshwork="ssh jclayton@172.16.10.37"
+alias work="cat $HOME/work/contact.txt"
 
 # jakec.dev stuff
 alias sshjake="ssh -i $HOME/jakecdevDockerKey.pem ubuntu@jakec.dev"
