@@ -6,12 +6,12 @@ My dotfiles for Arch Linux
 
 ```
 jake@jake-pc-arch 
-As on: 20 January 2022 
+As on: 21 January 2022 
 ---------------------- 
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
 Kernel: 5.16.1-arch1-1 
-Packages: 784 (pacman) 
+Packages: 794 (pacman) 
 Shell: bash 5.1.16 
 Resolution: 2560x1440 @ 165.00Hz 
 DE: xinitrc 
@@ -21,7 +21,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 5.64GiB / 31.22GiB 
+Memory: 5.09GiB / 31.22GiB 
 ```
 
 ## Installed Apps
@@ -36,7 +36,7 @@ bison 3.8.2-1
 bluez-utils 5.63-1
 bpytop 1.0.68-1
 dunst 1.7.3-1
-firefox 96.0.1-1
+firefox 96.0.2-1
 flex 2.6.4-3
 forticlient-vpn 7.0.0.0018-1
 freetube-bin 0.15.1-1
@@ -64,6 +64,7 @@ picom 8.2-1
 pkgconf 1.8.0-1
 polybar 3.5.7-2
 pulsemixer 1.5.1-3
+pyenv 2.2.3-1
 python-poetry 1.1.12-3
 python-tasklib 2.4.3-3
 qbittorrent 4.4.0-2
@@ -76,10 +77,11 @@ sxiv 26-1
 taskwarrior-tui 0.18.2-1
 teams 1.4.00.26453-1
 teamviewer 15.25.5-1
+thunderbird 91.5.0-2
 tldr 3.0.0-1
 trash-cli 0.21.10.24-2
 ttf-font-awesome 5.15.4-1
-tutanota-desktop 3.89.25-1
+tutanota-desktop 3.91.2-1
 udiskie 2.4.0-1
 vim-plug 0.10.0-1
 vim-vimwiki 2.5-1

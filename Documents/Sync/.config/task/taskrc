@@ -22,6 +22,13 @@ alias.@=context
 context.home=+@home
 context.work=+@work
 
+# To Do report
+report.def.description=To do list
+report.def.filter=status:pending -WAITING (-rnd) (-inbox)
+report.def.columns=id,urgency,priority,scheduled.countdown,due.relative,tags,project,description
+report.def.labels=ID,Urgency,Pri,Sch,Due,Tags,Project,Description
+report.def.sort=urgency-,project+
+
 # Inbox report
 report.in.columns=id,description
 report.in.description=Inbox
@@ -35,36 +42,35 @@ report.nx.sort=urgency-,project+
 report.nx.columns=priority,scheduled.countdown,due.relative,project,description
 report.nx.labels=Pri,Sch,Due,Project,Description
 
-# Waiting report
-report.wt.description=Waiting
-report.wt.filter=+WAITING
-report.wt.sort=project+,wait+,urgency-,project+
-report.wt.columns=id,wait,wait.remaining,urgency,priority,recur,scheduled.countdown,due.relative,project,description
-report.wt.labels=ID,Wait,Remaining,Urgency,Pri,Recur,Sch,Due,Project,Description
+# Standup report
+report.sup.description=Standup
+report.sup.filter=status:completed end:today (+sup)
+report.sup.columns=project,description
+report.sup.labels=Project,Description
+report.sup.sort=project+,urgency-
 
-## Later report
-report.lr.description=Later
-report.lr.filter=(+later or wait:later) and status.not:completed and status.not:deleted
-report.lr.sort=entry-
-report.lr.columns=id,project,description
-report.lr.labels=ID,Project,Description
+# Pending report
+report.pend.description=Pending
+report.pend.filter=+WAITING
+report.pend.sort=wait-,urgency-,project+
+report.pend.columns=id,urgency,priority,wait.remaining,scheduled.countdown,due.relative,tags,project,description
+report.pend.labels=ID,Urgency,Pri,Wait,Sch,Due,Tags,Project,Description
 
-# UDAs
-uda.estimate.type=numeric
-uda.estimate.label=Estimate
-uda.energy.type=string
-uda.energy.label=Energy
-uda.energy.values=0,1,2,3,4,5
+# Research report
+report.rnd.description=Research
+report.rnd.filter=status:pending (+rnd)
+report.rnd.sort=entry-
+report.rnd.columns=id,description
+report.rnd.labels=ID,Description
 
 # Taskwarrior-tui
 uda.taskwarrior-tui.task-report.next.filter=status:pending
-uda.taskwarrior-tui.shortcuts.1=~/.config/taskwarrior-tui/report-inbox.sh
-uda.taskwarrior-tui.shortcuts.2=~/.config/taskwarrior-tui/report-next-actions.sh
-uda.taskwarrior-tui.shortcuts.3=~/.config/taskwarrior-tui/report-waiting.sh
-uda.taskwarrior-tui.shortcuts.4=~/.config/taskwarrior-tui/report-later.sh
-uda.taskwarrior-tui.shortcuts.7=~/.config/taskwarrior-tui/filter-project.sh
-uda.taskwarrior-tui.shortcuts.8=~/.config/taskwarrior-tui/filter-all-child-tasks.sh
-uda.taskwarrior-tui.shortcuts.9=~/.config/taskwarrior-tui/open-note.sh
+uda.taskwarrior-tui.shortcuts.1=~/.config/taskwarrior-tui/report-todo.sh
+uda.taskwarrior-tui.shortcuts.2=~/.config/taskwarrior-tui/report-next.sh
+uda.taskwarrior-tui.shortcuts.3=~/.config/taskwarrior-tui/report-pend.sh
+uda.taskwarrior-tui.shortcuts.7=~/.config/taskwarrior-tui/report-rnd.sh
+uda.taskwarrior-tui.shortcuts.8=~/.config/taskwarrior-tui/report-inbox.sh
+uda.taskwarrior-tui.shortcuts.9=~/.config/taskwarrior-tui/report-standup.sh
 
 # Reviewing tasks
 uda.reviewed.type=date
@@ -74,15 +80,12 @@ report._reviewed.columns=uuid
 report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
 
-# Default 'next' report
-report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,estimate,energy,description,urgency
-report.next.labels=ID,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Est,Energy,Description,Urg
-
 # CLI submitted config changes
 uda.priority.values=H,M,,L
 urgency.inherit=on
 urgency.blocked.coefficient=0
 urgency.blocking.coefficient=0
+report.ready.filter=(+READY and -next and -later +UNBLOCKED)
 report.list.sort=urgency-,project+
 
 # Taskwarrior taskd server
