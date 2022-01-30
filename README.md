@@ -6,12 +6,12 @@ My dotfiles for Arch Linux
 
 ```
 jake@jake-pc-arch 
-As on: 21 January 2022 
+As on: 31 January 2022 
 ---------------------- 
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
-Kernel: 5.16.1-arch1-1 
-Packages: 794 (pacman) 
+Kernel: 5.16.3-arch1-1 
+Packages: 823 (pacman) 
 Shell: bash 5.1.16 
 Resolution: 2560x1440 @ 165.00Hz 
 DE: xinitrc 
@@ -21,22 +21,24 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 5.09GiB / 31.22GiB 
+Memory: 1.67GiB / 31.22GiB 
 ```
 
 ## Installed Apps
 
 ```
+anki 2.1.49-3
 autoconf 2.71-1
 automake 1.16.5-1
 autotiling 1.6-2
 base 2-2
-bind 9.16.24-1
+bind 9.16.25-1
 bison 3.8.2-1
 bluez-utils 5.63-1
 bpytop 1.0.68-1
 dunst 1.7.3-1
-firefox 96.0.2-1
+firefox 96.0.3-1
+flameshot 0.10.2-2
 flex 2.6.4-3
 forticlient-vpn 7.0.0.0018-1
 freetube-bin 0.15.1-1
@@ -50,13 +52,12 @@ kitty 0.24.1-1
 lf 26-1
 lightdm-webkit-theme-aether 2.2.2-1
 make 4.3-3
-mpv 1:0.34.1-1
 mullvad-vpn 2021.6-2
 neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-8
 ntp 4.2.8.p15-1
 numlockx 1.2-5
-nvidia 495.46-9
+nvidia 495.46-11
 packettracer 8.1.0-1
 pacman-contrib 1.4.0-4
 patch 2.7.6-8
@@ -64,25 +65,25 @@ picom 8.2-1
 pkgconf 1.8.0-1
 polybar 3.5.7-2
 pulsemixer 1.5.1-3
-pyenv 2.2.3-1
+pyenv 2.2.4-1
 python-poetry 1.1.12-3
 python-tasklib 2.4.3-3
 qbittorrent 4.4.0-2
 redshift 1.12-5
-remind 3.3.10-1
+remind 3.3.11-1
 remmina 1:1.4.23-3
-rofi 1.7.2-1
+rofi 1.7.3-1
 steam 1.0.0.74-1
 sxiv 26-1
-taskwarrior-tui 0.18.2-1
+taskwarrior-tui 0.18.5-1
 teams 1.4.00.26453-1
-teamviewer 15.25.5-1
-thunderbird 91.5.0-2
+teamviewer 15.26.4-1
 tldr 3.0.0-1
 trash-cli 0.21.10.24-2
 ttf-font-awesome 5.15.4-1
-tutanota-desktop 3.91.2-1
+tutanota-desktop 3.91.3-1
 udiskie 2.4.0-1
+ueberzug 18.1.9-3
 vim-plug 0.10.0-1
 vim-vimwiki 2.5-1
 virtualbox-ext-oracle 6.1.32-1
