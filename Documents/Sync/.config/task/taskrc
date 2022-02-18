@@ -1,5 +1,6 @@
 # Files
 data.location=/home/jake/Documents/task
+verbose=blank,footnote,label,new-id,affected,edit,special,project,sync,unwait # hide taskrc override warning
 
 # Allow case insensitive search
 search.case.sensitive=no
@@ -19,8 +20,9 @@ urgency.user.tag.later.coefficient=-100
 
 # Contexts
 alias.@=context
-context.home=+@home
+context.home=-@work -@study
 context.work=+@work
+context.study=+@study
 
 # To Do report
 report.def.description=To do list
