@@ -21,7 +21,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 3.43GiB / 31.22GiB 
+Memory: 3.24GiB / 31.22GiB 
 ```
 
 ## Installed Apps

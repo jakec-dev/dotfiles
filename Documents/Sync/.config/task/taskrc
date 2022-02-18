@@ -15,12 +15,12 @@ urgency.user.tag.important.coefficient=10
 urgency.uda.priority..coefficient=1.8
 urgency.annotations.coefficient=0
 urgency.uda.priority.L.coefficient=0
-urgency.user.tag.rnd.coefficient=-2
+urgency.user.tag.@study.coefficient=-2
 urgency.user.tag.later.coefficient=-100
 
 # Contexts
 alias.@=context
-context.home=-@work -@study
+context.home=+@home or (-@work and -@study)
 context.work=+@work
 context.study=+@study
 
@@ -97,4 +97,4 @@ taskd.ca=~/.config/task/ca.cert.pem
 taskd.server=task.jakec.dev:53589
 taskd.credentials=jakec-dev/jake/8f43cf2b-ad82-41fd-9fca-98ee295e83b8
 taskd.trust=strict
-context=work
+context=study
