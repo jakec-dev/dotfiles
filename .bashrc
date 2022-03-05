@@ -22,6 +22,7 @@ alias work="cat $HOME/work/contact.txt"
 
 # jakec.dev stuff
 alias sshjake="ssh -i $HOME/jakecdevDockerKey.pem ubuntu@jakec.dev"
+alias scpjake="scp -i $HOME/jakecdevDockerKey.pem"
 
 # command tweaks
 alias sudo="sudo -v; sudo "

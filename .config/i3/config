@@ -103,7 +103,6 @@ for_window [title="^pulsemixer$" class="^kitty$"] floating enable
 
 # other app shortcuts
 bindsym $mod+b exec firefox
-bindsym $mod+p exec keepassxc
 #bindsym $mod+q exec rofi -show calc -modi calc -no-show-match -no-sort -display-calc "" 
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -182,7 +181,7 @@ bindsym $mod+r mode "resize"
 # i3 gaps setup
 for_window [class=".*"] border pixel 2 
 gaps inner 16
-gaps outer 0 
+gaps outer 0
 #smart_gaps on
 
 # https://github.com/ValveSoftware/steam-for-linux/issues/1040

@@ -6,12 +6,12 @@ My dotfiles for Arch Linux
 
 ```
 jake@jake-pc-arch 
-As on: 19 February 2022 
------------------------ 
+As on: 06 March 2022 
+-------------------- 
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
-Kernel: 5.16.9-arch1-1 
-Packages: 849 (pacman) 
+Kernel: 5.16.12-arch1-1 
+Packages: 870 (pacman) 
 Shell: bash 5.1.16 
 Resolution: 2560x1440 @ 165.00Hz 
 DE: xinitrc 
@@ -21,7 +21,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 3.24GiB / 31.22GiB 
+Memory: 2.66GiB / 31.22GiB 
 ```
 
 ## Installed Apps
@@ -32,35 +32,35 @@ autoconf 2.71-1
 automake 1.16.5-1
 autotiling 1.6-2
 base 2-2
-bind 9.16.25-1
-bison 3.8.2-1
-bluez-utils 5.63-1
+bind 9.18.0-1
+bison 3.8.2-3
+bluez-utils 5.63-2
 bpytop 1.0.68-1
 docker 1:20.10.12-1
-docker-compose 2.2.3-2
-dunst 1.7.3-2
-firefox 97.0.1-1
+docker-compose 2.3.0-1
+dunst 1.8.1-1
+firefox 97.0.2-1
 flameshot 11.0.0-4
 flex 2.6.4-3
 forticlient-vpn 7.0.0.0018-1
 freetube-bin 0.16.0-1
-google-chrome 98.0.4758.102-1
+google-chrome 99.0.4844.51-1
 grub 2:2.06-4
-i3-swallow-git r66.7a9faed-1
+i3-swallow-git r69.6fbc046-1
 imapsync 2.178-1
 inetutils 2.2-1
 jq 1.6-4
-kitty 0.24.2-1
+kitty 0.24.4-1
 lf 26-1
 lightdm-webkit-theme-aether 2.2.2-1
 make 4.3-3
-mullvad-vpn 2021.6-2
+mullvad-vpn 2021.6-3
 neofetch 7.1.0-2
 neovim 0.6.1-2
 nerd-fonts-complete 2.1.0-8
 ntp 4.2.8.p15-1
 numlockx 1.2-5
-nvidia 510.54-2
+nvidia 510.54-5
 packettracer 8.1.0-1
 pacman-contrib 1.4.0-4
 patch 2.7.6-8
@@ -69,7 +69,7 @@ pkgconf 1.8.0-1
 polybar 3.5.7-2
 pulsemixer 1.5.1-3
 pyenv 2.2.4-1
-python-poetry 1.1.13-1
+python-poetry 1.1.13-2
 python-tasklib 2.4.3-3
 qbittorrent 4.4.1-1
 redshift 1.12-5
@@ -77,16 +77,17 @@ remind 3.4.0-1
 remmina 1:1.4.24-1
 rofi 1.7.3-1
 steam 1.0.0.74-1
-streamlink-twitch-gui 1.13.0-2
+streamlink-twitch-gui 2.0.0-1
 sxiv 26-1
-taskwarrior-tui 0.19.4-1
+tasksh 1.2.0-2
+taskwarrior-tui 0.20.1-1
 teams 1.4.00.26453-1
-teamviewer 15.26.4-1
-tldr 3.0.0-1
-trash-cli 0.21.10.24-2
+teamviewer 15.27.3-1
+tldr 3.1.0-1
+trash-cli 0.21.10.24-3
 ttf-font-awesome 6.0.0-1
 tutanota-desktop 3.91.10-1
-udiskie 2.4.1-1
+udiskie 2.4.2-1
 ueberzug 18.1.9-3
 vim-plug 0.11.0-1
 vim-vimwiki 2.5-1
@@ -103,8 +104,8 @@ xorg-fonts-100dpi 1.0.3-7
 xorg-fonts-75dpi 1.0.3-7
 xorg-iceauth 1.0.8-2
 xorg-mkfontscale 1.2.1-2
-xorg-server-xnest 21.1.3-3
-xorg-server-xvfb 21.1.3-3
+xorg-server-xnest 21.1.3-6
+xorg-server-xvfb 21.1.3-6
 xorg-sessreg 1.1.2-2
 xorg-smproxy 1.0.6-3
 xorg-x11perf 1.6.1-2
