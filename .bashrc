@@ -5,17 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Start ssh-agent automatically, ensure only one agent process runs at a time
-#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    #ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-#fi
-#if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    #source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-#fi
-
-# FIX THIS SHIT!
-alias mountgames="sudo mount -t ntfs /dev/sda2 /media/games; sudo chmod 777 /media/games;"
-
 # work stuff
 alias sshwork="ssh jclayton@172.16.10.37"
 alias work="cat $HOME/work/contact.txt"
@@ -36,17 +25,6 @@ alias py="python"
 # fix ssh issue when using kitty terminal
 # https://wiki.archlinux.org/title/Kitty#Terminal_issues_with_SSH
 alias ssh="kitty +kitten ssh "
-
-# cd + ls in one command
-cl() {
-    local dir="$1"
-    local dir="${dir:=$HOME}"
-    if [[ -d "$dir" ]]; then
-        cd "$dir" >/dev/null; ls
-    else
-        echo "bash: cl: $dir: Directory not found"
-    fi
-}
 
 # create a bash script file
 mks() {
