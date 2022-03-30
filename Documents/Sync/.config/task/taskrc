@@ -100,4 +100,3 @@ taskd.ca=~/.config/task/ca.cert.pem
 taskd.server=task.jakec.dev:53589
 taskd.credentials=jakec-dev/jake/8f43cf2b-ad82-41fd-9fca-98ee295e83b8
 taskd.trust=strict
-context=home

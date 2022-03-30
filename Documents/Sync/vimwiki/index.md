@@ -6,6 +6,8 @@
 - [Personal](Personal)
 - [Education](Education/index)
 - [Work](work/index.md)
+- [Career](./career/index.md)
+- [Work From Anywhere](./work-from-anywhere/index.md)
 
 ## Usage
 
