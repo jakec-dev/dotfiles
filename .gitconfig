@@ -1,0 +1,7 @@
+[user]
+	email = jake@jakec.dev
+	name = Jake
+[color]
+	ui = auto
+[init]
+	defaultBranch = main
