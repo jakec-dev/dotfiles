@@ -6,11 +6,11 @@ My dotfiles for Arch Linux
 
 ```
 jake@jake-pc-arch 
-As on: 12 April 2022 
+As on: 17 April 2022 
 -------------------- 
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
-Kernel: 5.17.1-arch1-1 
+Kernel: 5.17.2-arch3-1 
 Packages: 887 (pacman) 
 Shell: bash 5.1.16 
 Resolution: 2560x1440 @ 165.00Hz 
@@ -21,7 +21,7 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 3.95GiB / 31.22GiB 
+Memory: 2.80GiB / 31.22GiB 
 ```
 
 ## Installed Apps
@@ -40,18 +40,18 @@ docker 1:20.10.14-1
 docker-compose 2.4.1-1
 dunst 1.8.1-1
 easyeffects 6.2.4-1
-firefox 99.0-1
+firefox 99.0.1-1
 flameshot 11.0.0-4
 flex 2.6.4-3
 forticlient-vpn 7.0.0.0018-1
 freetube-bin 0.16.0-1
-google-chrome 100.0.4896.75-1
+google-chrome 100.0.4896.127-1
 grub 2:2.06-5
 i3-swallow-git r69.6fbc046-1
 imapsync 2.178-1
 inetutils 2.2-1
 jq 1.6-4
-kitty 0.24.4-1
+kitty 0.25.0-1
 lf 27-1
 lightdm-webkit-theme-aether 2.2.2-1
 make 4.3-3
@@ -61,8 +61,7 @@ neovim 0.6.1-2
 nerd-fonts-complete 2.1.0-8
 ntp 4.2.8.p15-1
 numlockx 1.2-5
-nvidia 510.60.02-11
-packettracer 8.1.0-1
+nvidia 510.60.02-15
 pacman-contrib 1.4.0-4
 patch 2.7.6-8
 picom 9.1-2
@@ -87,14 +86,14 @@ teamviewer 15.28.8-1
 tldr 3.1.0-1
 trash-cli 0.21.10.24-3
 ttf-font-awesome 6.1.1-1
-tutanota-desktop 3.94.5-2
+tutanota-desktop 3.94.9-1
 udiskie 2.4.2-1
 ueberzug 18.1.9-3
 units 2.21-2
 vim-plug 0.11.0-1
 vim-vimwiki 2.5-1
 virtualbox-ext-oracle 6.1.32-1
-vscodium-bin 1.66.1-1
+vscodium-bin 1.66.2-1
 xcursor-comix 0.9.2-1
 xf86-video-vesa 2.5.0-2
 xgetres 1.0-1

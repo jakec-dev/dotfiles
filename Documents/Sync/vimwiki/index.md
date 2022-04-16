@@ -4,7 +4,7 @@
 - [Diary](diary/diary.md)
 - [System](System)
 - [Personal](Personal)
-- [Education](Education/index)
+- [Education](education/index.md)
 - [Work](work/index.md)
 - [Career](./career/index.md)
 - [Work From Anywhere](./work-from-anywhere/index.md)
