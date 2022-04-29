@@ -61,7 +61,7 @@ alias rem-edit="$EDITOR ~/Documents/Sync/.reminders/cli.rem"
 # app shortcuts
 alias mount-phone="simple-mtpfs phone/"
 alias unmount-phone="fusermount -u phone/"
-alias weather="curl wttr.in/'Gold Coast, Australia'"
+alias weather="curl wttr.in/Gold+Coast"
 alias lf="$SCRIPTS_HOME/lf/lfrun"
 alias vimwiki='vim -c VimwikiIndex'
 alias vagrant="TERM=xterm-256color vagrant"

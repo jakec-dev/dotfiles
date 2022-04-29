@@ -6,12 +6,12 @@ My dotfiles for Arch Linux
 
 ```
 jake@jake-pc-arch 
-As on: 17 April 2022 
+As on: 30 April 2022 
 -------------------- 
 OS: Arch Linux 
 Host: B560M AORUS PRO AX -CF 
-Kernel: 5.17.2-arch3-1 
-Packages: 887 (pacman) 
+Kernel: 5.17.4-arch1-1 
+Packages: 904 (pacman) 
 Shell: bash 5.1.16 
 Resolution: 2560x1440 @ 165.00Hz 
 DE: xinitrc 
@@ -21,19 +21,19 @@ Icons: Papirus [GTK3]
 Terminal: git 
 CPU: Intel i5-10400F @ 4.3GHz 
 GPU: NVIDIA GeForce RTX 3070 Lite Hash Rate 
-Memory: 2.80GiB / 31.22GiB 
+Memory: 3.49GiB / 31.22GiB 
 ```
 
 ## Installed Apps
 
 ```
-anki 2.1.49-3
+anki 2.1.51-2
 autoconf 2.71-1
 automake 1.16.5-1
 autotiling 1.6-2
 base 2-2
-bind 9.18.1-1
-bison 3.8.2-3
+bind 9.18.2-1
+bison 3.8.2-4
 bluez-utils 5.64-2
 bpytop 1.0.68-1
 docker 1:20.10.14-1
@@ -41,11 +41,11 @@ docker-compose 2.4.1-1
 dunst 1.8.1-1
 easyeffects 6.2.4-1
 firefox 99.0.1-1
-flameshot 11.0.0-4
+flameshot 11.0.0-5
 flex 2.6.4-3
 forticlient-vpn 7.0.0.0018-1
 freetube-bin 0.16.0-1
-google-chrome 100.0.4896.127-1
+google-chrome 101.0.4951.41-1
 grub 2:2.06-5
 i3-swallow-git r69.6fbc046-1
 imapsync 2.178-1
@@ -57,21 +57,21 @@ lightdm-webkit-theme-aether 2.2.2-1
 make 4.3-3
 mullvad-vpn 2022.1-1
 neofetch 7.1.0-2
-neovim 0.6.1-2
+neovim 0.7.0-3
 nerd-fonts-complete 2.1.0-8
 ntp 4.2.8.p15-1
 numlockx 1.2-5
-nvidia 510.60.02-15
+nvidia 510.60.02-17
 pacman-contrib 1.4.0-4
 patch 2.7.6-8
-picom 9.1-2
+picom 9.1-3
 pkgconf 1.8.0-1
 polybar 3.6.2-1
 pulsemixer 1.5.1-3
 pyenv 2.2.5-1
 python-poetry 1.1.13-2
 python-tasklib 2.4.3-3
-qbittorrent 4.4.2-1
+qbittorrent 4.4.2-2
 redshift 1.12-5
 remind 3.4.0-1
 remmina 1:1.4.25-1
@@ -80,19 +80,21 @@ steam 1.0.0.74-1
 streamlink-twitch-gui 2.0.0-1
 sxiv 26-1
 tasksh 1.2.0-2
-taskwarrior-tui 0.22.0-1
-teams 1.4.00.26453-1
+taskwarrior-tui 0.23.3-1
+teams 1.5.00.10453-1
 teamviewer 15.28.8-1
+texlive-fontsextra 2022.62977-1
 tldr 3.1.0-1
-trash-cli 0.21.10.24-3
+trash-cli 0.22.4.16-1
 ttf-font-awesome 6.1.1-1
-tutanota-desktop 3.94.9-1
+tutanota-desktop 3.95.4-1
 udiskie 2.4.2-1
 ueberzug 18.1.9-3
-units 2.21-2
+units 2.21-3
+unzip 6.0-18
 vim-plug 0.11.0-1
 vim-vimwiki 2.5-1
-virtualbox-ext-oracle 6.1.32-1
+virtualbox-ext-oracle 6.1.34-1
 vscodium-bin 1.66.2-1
 xcursor-comix 0.9.2-1
 xf86-video-vesa 2.5.0-2
