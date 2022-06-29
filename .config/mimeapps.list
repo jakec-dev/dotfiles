@@ -14,3 +14,4 @@ inode/x-empty=vim.desktop
 text/x-script.python=vim.desktop
 x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/mailto=google-chrome.desktop
+x-scheme-handler/postman=Postman.desktop
