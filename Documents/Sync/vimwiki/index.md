@@ -1,13 +1,8 @@
 # My Wiki
 
-- [Task Notes](tasks/index.md)
 - [Diary](diary/diary.md)
-- [System](System)
-- [Personal](Personal)
-- [Education](education/index.md)
-- [Work](work/index.md)
-- [Career](./career/index.md)
-- [Work From Anywhere](./work-from-anywhere/index.md)
+- [Personal](personal/index.md)
+- [Career](career/index.md)
 
 ## Usage
 
