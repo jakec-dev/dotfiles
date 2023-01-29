@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=Image Viewer
-Exec=/usr/bin/i3-swallow /usr/bin/sxiv %U
+Exec=/usr/bin/swallow /usr/bin/sxiv %U
