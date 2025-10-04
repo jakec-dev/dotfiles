@@ -56,6 +56,7 @@ call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'jiangmiao/auto-pairs'
   Plug 'lewis6991/gitsigns.nvim'
+  Plug 'tpope/vim-surround'
   Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa' }
 call plug#end()
 
@@ -212,6 +213,9 @@ nmap <leader>rn <Plug>(coc-rename)
 " Remap for format selected region
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+" Jump to next/previous issue
+nnoremap <silent> [x :call CocAction('diagnosticNext')<cr>
+nnoremap <silent> ]x :call CocAction('diagnosticPrevious')<cr>
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
