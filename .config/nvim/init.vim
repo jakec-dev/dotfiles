@@ -58,7 +58,7 @@ call plug#begin()
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa' }
 call plug#end()
- 
+
 " <leader>a for coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
@@ -86,6 +86,18 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
  
 lua << EOF
+require('kanagawa').setup({ 
+ colors = {
+    theme = {
+      dragon = {
+        ui = {
+          bg = "#282727"
+        },
+      },
+    },
+  },
+})
+
 require('gitsigns').setup{
   on_attach = function(bufnr)
     local gitsigns = require('gitsigns')
@@ -153,8 +165,8 @@ require('gitsigns').setup{
 }
 EOF
  
-colorscheme kanagawa
- 
+colorscheme kanagawa-dragon
+
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
