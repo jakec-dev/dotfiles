@@ -43,6 +43,10 @@ vmap <C-c> "+y
 nnoremap j gj
 nnoremap k gk
 nnoremap <LeftMouse> ma<LeftMouse>`a
+
+" Format markdown table
+vnoremap <leader>ct :!column -t -s '\|' -o '\|'<CR>
+
 " Rename tmux window to file name
 nnoremap <leader>tr :echo system('tmux rename-window ' . shellescape(expand('%:t')))<CR>
  
@@ -58,7 +62,21 @@ call plug#begin()
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'tpope/vim-surround'
   Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa' }
+  Plug 'MeanderingProgrammer/render-markdown.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'tpope/vim-repeat'
 call plug#end()
+
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Show hidden files by default in NERDTree
+let NERDTreeShowHidden=1
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " <leader>a for coc-spell-checker
 vmap <leader>a <Plug>(coc-codeaction-selected)
@@ -98,6 +116,15 @@ require('kanagawa').setup({
     },
   },
 })
+
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'markdown', 'markdown_inline' },
+  highlight = {
+    enable = true,
+  },
+})
+
+require('render-markdown').setup({})
 
 require('gitsigns').setup{
   on_attach = function(bufnr)
