@@ -59,6 +59,10 @@ call plug#begin()
   Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa' }
 call plug#end()
  
+" <leader>a for coc-spell-checker
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
+
 " disable all linters as that is taken care of by coc.nvim
 let g:go_diagnostics_enabled = 0
 let g:go_metalinter_enabled = []
