@@ -24,7 +24,7 @@ setopt HIST_IGNORE_SPACE # Ignore commands starting with spaces
 
 # Run ls on cd with nice formatting
 cd() {
-  builtin cd "$@" && ls -p
+  builtin cd "$@" && eza --icons=auto -F 
 }
 
 # Created by `pipx` on 2025-04-21 08:33:34
@@ -48,8 +48,6 @@ alias claude="/home/jake/.claude/local/claude"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-autoload -U compinit; compinit
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -137,14 +135,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   ubuntu
   git
+  aws
+  sudo
   gitfast
   ssh
   ssh-agent
   npm
-  nvm
+  fnm
+  node
+  golang
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-interactive-cd
+  fzf-tab
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -153,7 +155,12 @@ zstyle :omz:plugins:ssh-agent agent-forwarding yes
 zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_personal
 zstyle :omz:plugins:ssh-agent quiet yes
 zstyle :omz:plugins:ssh-agent lazy yes
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu no
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 -F --color=always --icons=auto $realpath'
 
+autoload -U compinit; compinit
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -187,3 +194,6 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
