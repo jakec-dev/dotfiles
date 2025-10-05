@@ -13,6 +13,7 @@ sudo apt install git curl tree tldr stow nvim tmux
 ```
 
 **Mac**
+
 ```sh
 brew install nvim tmux
 ```
@@ -25,6 +26,7 @@ git clone git@github.com:jakec-dev/dotfiles.git
 ```
 
 3. Run stow
+
 ```sh
 cd ~/dotfiles
 stow .
@@ -36,7 +38,7 @@ stow .
 tmux
 ```
 
-Press `Control+b Shift+i`
+- Press `Control+b Shift+i`
 
 5. Install nvim plugins
 
@@ -56,17 +58,19 @@ nvim
 Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-prettier coc-eslint coc-spell-checker`
 
 ## Vim Cheat Sheet
-| Key    | Action                                           | .   | Key        | Action                                             |
-| -      | --                                               | --  | --         | --                                                 |
-| H      | move to top of screen                            | .   | cs"'       | change double-quotes to single-quotes              |
-| M      | move to middle of screen                         | .   | ds"        | remove double-quotes                               |
-| L      | move to bottom of screen                         | .   | ysiw"      | surround word with double quotes                   |
-| [x     | move to next error                               | .   | ,aw        | open spell checker menu for word                   |
-| ]x     | move to previous error                           | .   | ,aap       | open spell checker menu for paragraph              |
-| zz     | center cursor on screen                          | .   | *          | search word under cursor                           |
-| zt     | position cursor on top of screen                 | .   | "<number>y | yank to <number> registry                          |
-| zb     | position cursor on bottom of screen              | .   | "<number>p | paste <number> registry                            |
-| ^      | jump to first non-blank character in line        | .   | m<char>    | save <char> as mark                                |
-| ;      | repeat previous f, t, F or T movement            | .   | '<char>    | jump to <char> mark                                | 
-| ,      | repeat previous f, t, F or T movement, backwards | .   | .          | .                                                  |
 
+| Key      | Action                                           | .   | Key        | Action                                |
+| -        | --                                               | --  | --         | --                                    |
+| H        | move to top of screen                            | .   | cs"'       | change double-quotes to single-quotes |
+| M        | move to middle of screen                         | .   | ds"        | remove double-quotes                  |
+| L        | move to bottom of screen                         | .   | ysiw"      | surround word with double quotes      |
+| [x       | move to next error                               | .   | ,aw        | open spell checker menu for word      |
+| ]x       | move to previous error                           | .   | ,aap       | open spell checker menu for paragraph |
+| zz       | center cursor on screen                          | .   | *          | search word under cursor              |
+| zt       | position cursor on top of screen                 | .   | "<number>y | yank to <number> registry             |
+| zb       | position cursor on bottom of screen              | .   | "<number>p | paste <number> registry               |
+| ^        | jump to first non-blank character in line        | .   | m<char>    | save <char> as mark                   |
+| ;        | repeat previous f, t, F or T movement            | .   | '<char>    | jump to <char> mark                   | 
+| ,        | repeat previous f, t, F or T movement, backwards | .   | %          | jump to matching bracket              |
+| Ctrl + o | jump to previous cursor position                 | .   | .          | .                                     |
+| Ctrl + i | jump cursor position forward                     | .   | .          | .                                     |
