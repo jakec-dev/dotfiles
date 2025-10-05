@@ -65,6 +65,7 @@ call plug#begin()
   Plug 'MeanderingProgrammer/render-markdown.nvim'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'dimtion/guttermarks.nvim'
   Plug 'tpope/vim-repeat'
 call plug#end()
 

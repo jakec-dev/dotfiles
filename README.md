@@ -53,18 +53,20 @@ nvim
 nvim
 ```
 
-Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-pretter coc-eslint coc-spell-checker`
+Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-prettier coc-eslint coc-spell-checker`
 
-## Vim Cheatsheet
+## Vim Cheat Sheet
+| Key    | Action                                           | .   | Key        | Action                                             |
+| -      | --                                               | --  | --         | --                                                 |
+| H      | move to top of screen                            | .   | cs"'       | change double-quotes to single-quotes              |
+| M      | move to middle of screen                         | .   | ds"        | remove double-quotes                               |
+| L      | move to bottom of screen                         | .   | ysiw"      | surround word with double quotes                   |
+| [x     | move to next error                               | .   | ,aw        | open spell checker menu for word                   |
+| ]x     | move to previous error                           | .   | ,aap       | open spell checker menu for paragraph              |
+| zz     | center cursor on screen                          | .   | *          | search word under cursor                           |
+| zt     | position cursor on top of screen                 | .   | "<number>y | yank to <number> registry                          |
+| zb     | position cursor on bottom of screen              | .   | "<number>p | paste <number> registry                            |
+| ^      | jump to first non-blank character in line        | .   | m<char>    | save <char> as mark                                |
+| ;      | repeat previous f, t, F or T movement            | .   | '<char>    | jump to <char> mark                                | 
+| ,      | repeat previous f, t, F or T movement, backwards | .   | .          | .                                                  |
 
-| Key    | Action                                    | .   | Key       | Action                                |
-| -      | --                                        | --  | --        | --                                    |
-| H      | move to top of screen                     | .   | cs"'      | change double-quotes to single-quotes |
-| M      | move to middle of screen                  | .   | ds""      | remove double-quotes                  |
-| L      | move to bottom of screen                  | .   | ysiw"     | surround word with double quotes      |
-| zz     | center cursor on screen                   | .   | .         | .                                     |
-| zt     | position cursor on top of screen          | .   | .         | .                                     |
-| zb     | position cursor on bottom of screen       | .   | .         | .                                     |
-| ^      | jump to first non-blank character in line | .   | .         | .                                     |
-| ; | repeat previous f, t, F or T movement | . | . | . |
-| , | repeat previous f, t, F or T movement, backwards | . | . | . |
