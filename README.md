@@ -36,6 +36,11 @@ cd ~/dotfiles
 stow .
 ```
 
+4. Setup zsh
+```sh
+git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+```
+
 4. Install tmux plugins
 
 ```sh
