@@ -43,7 +43,6 @@ esac
 # pnpm end
 export PATH=$PATH:/opt/flyway
 
-alias claude="/home/jake/.claude/local/claude"
 # golang
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
