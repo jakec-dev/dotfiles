@@ -67,6 +67,7 @@ context.home=-inbox and (+@home or (-@work and -@study))
 context.work=+@work
 context.study=+@study
 context.inbox=+inbox
+context.res=+@res
 
 # Inbox report
 report.in.columns=id,description

@@ -858,23 +858,23 @@
 
   ##############[ taskwarrior: taskwarrior task count (https://taskwarrior.org/) ]##############
   # Taskwarrior color.
-  # typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND=74
-  typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND='$(
-    [[ $(task +OVERDUE count 2>/dev/null) -gt 0 ]] && echo 1 || echo 74
-    )'
+  typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND=74
   
   # Better formatting of overdue / due today / next
   typeset -g POWERLEVEL9K_TASKWARRIOR_CONTENT_EXPANSION='$(
-    local overdue=$(task +OVERDUE -DELETED count 2>/dev/null || echo 0)
-    local today=$(task due:today -DELETED count 2>/dev/null || echo 0)
-    local next=$(task +next -DELETED count 2>/dev/null || echo 0)
-    
+    local context=$(task _get rc.context 2>/dev/null)
+    local overdue=$(task +OVERDUE status:pending count 2>/dev/null || echo 0)
+    local today=$(task due:today status:pending count 2>/dev/null || echo 0)
+    local next=$(task +next status:pending count 2>/dev/null || echo 0)
+    local all=$(task status:pending count 2>/dev/null || echo 0)
+
     local output=""
     [[ $overdue -gt 0 ]] && output="%F{red}${overdue}%f"
     [[ $today -gt 0 ]] && output="${output:+$output | }%F{green}${today}%f"
-    [[ $next -gt 0 ]] && output="${output:+$output | }%F{default}${next}%f"
+    [[ $next -gt 0 ]] && output="${output:+$output | }%F{white}${next}%f"
+    [[ $all -gt 0 ]] && output="${output:+$output | }%F{blue}${all}%f"
     
-    echo "$output"
+    echo "${context:-all}: ${output:-0}"
   )'
 
   # Taskwarrior segment format. The following parameters are available within the expansion.
