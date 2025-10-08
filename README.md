@@ -81,5 +81,3 @@ Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-pret
 | ^        | jump to first non-blank character in line        | .   | m<char>    | save <char> as mark                   |
 | ;        | repeat previous f, t, F or T movement            | .   | '<char>    | jump to <char> mark                   | 
 | ,        | repeat previous f, t, F or T movement, backwards | .   | %          | jump to matching bracket              |
-| Ctrl + o | jump to previous cursor position                 | .   | .          | .                                     |
-| Ctrl + i | jump cursor position forward                     | .   | .          | .                                     |

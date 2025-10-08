@@ -73,3 +73,4 @@ report.in.columns=id,description
 report.in.description=Inbox
 report.in.filter=status:pending (+inbox)
 report.in.labels=ID,Description
+news.version=2.6.0
