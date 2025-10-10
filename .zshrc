@@ -2,10 +2,22 @@
 export EDITOR=vim
 export GIT_EDITOR=vim
 
+# Fuzzy find file then open in nvim
+fe() {
+  fzf -m \
+    --preview='bat --color=always --style=header,grid --line-range :300 {}' \
+    --preview-window='right:60%' \
+    --bind 'enter:become(nvim {+})' \
+    --bind 'ctrl-/:toggle-preview' \
+    --height=80% \
+    --layout=reverse \
+    --border
+}
+
 # fnm
-FNM_PATH="/home/jake/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/jake/.local/share/fnm:$PATH"
+  export PATH="$HOME/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
 
@@ -28,14 +40,14 @@ cd() {
 }
 
 # Created by `pipx` on 2025-04-21 08:33:34
-export PATH="$PATH:/home/jake/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Task Master aliases added on 4/26/2025
 alias tm='task-master'
 alias taskmaster='task-master'
 
 # pnpm
-export PNPM_HOME="/home/jake/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

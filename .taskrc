@@ -15,7 +15,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=/home/jake/.task
+data.location=~/.task
 
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
@@ -74,4 +74,5 @@ report.in.columns=id,description
 report.in.description=Inbox
 report.in.filter=status:pending (+inbox)
 report.in.labels=ID,Description
-news.version=2.6.0
+news.version=3.4.1
+context=work
