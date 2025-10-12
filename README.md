@@ -67,7 +67,6 @@ nvim
 Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-prettier coc-eslint coc-spell-checker`
 
 ## Vim Cheat Sheet
-
 | Key      | Action                                           | .   | Key        | Action                                |
 | -        | --                                               | --  | --         | --                                    |
 | H        | move to top of screen                            | .   | cs"'       | change double-quotes to single-quotes |
@@ -81,3 +80,5 @@ Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-pret
 | ^        | jump to first non-blank character in line        | .   | m<char>    | save <char> as mark                   |
 | ;        | repeat previous f, t, F or T movement            | .   | '<char>    | jump to <char> mark                   | 
 | ,        | repeat previous f, t, F or T movement, backwards | .   | %          | jump to matching bracket              |
+| Ctrl+u   | jump up half a screen                            | .   | .          | .                                     |
+| Ctrl+d   | jump down half a screen                          | .   | .          | .                                     |
