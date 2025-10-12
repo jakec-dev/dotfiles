@@ -69,9 +69,9 @@ Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-pret
 ## Vim Cheat Sheet
 | Key      | Action                                           | .   | Key        | Action                                |
 | -        | --                                               | --  | --         | --                                    |
-| H        | move to top of screen                            | .   | cs"'       | change double-quotes to single-quotes |
-| M        | move to middle of screen                         | .   | ds"        | remove double-quotes                  |
-| L        | move to bottom of screen                         | .   | ysiw"      | surround word with double quotes      |
+| .        | .                                                | .   | cs"'       | change double-quotes to single-quotes |
+| .        | .                                                | .   | ds"        | remove double-quotes                  |
+| .        | .                                                | .   | ysiw"      | surround word with double quotes      |
 | [x       | move to next error                               | .   | ,aw        | open spell checker menu for word      |
 | ]x       | move to previous error                           | .   | ,aap       | open spell checker menu for paragraph |
 | zz       | center cursor on screen                          | .   | *          | search word under cursor              |
@@ -80,5 +80,5 @@ Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-pret
 | ^        | jump to first non-blank character in line        | .   | m<char>    | save <char> as mark                   |
 | ;        | repeat previous f, t, F or T movement            | .   | '<char>    | jump to <char> mark                   | 
 | ,        | repeat previous f, t, F or T movement, backwards | .   | %          | jump to matching bracket              |
-| Ctrl+u   | jump up half a screen                            | .   | .          | .                                     |
+| Ctrl+u   | jump up half a screen                            | .   | vi<char>   | visual select inside character        |
 | Ctrl+d   | jump down half a screen                          | .   | .          | .                                     |
