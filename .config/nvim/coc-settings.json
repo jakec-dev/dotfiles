@@ -22,22 +22,15 @@
   "[typescript]": {
     "coc.preferences.formatOnSave": true
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": [
-        "go.mod"
-      ],
-      "filetypes": [
-        "go"
-      ]
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
     }
   },
-  "cSpell.userWords": [
-    "Dotfiles",
-    "Localsearch",
-    "jakec",
-    "nvim",
-    "tldr"
-  ]
+  "cSpell.userWords": ["Dotfiles", "Localsearch", "jakec", "nvim", "tldr"]
 }

@@ -1,65 +1,3 @@
-# Use vim instead of vscode to commit
-export EDITOR=vim
-export GIT_EDITOR=vim
-
-# Fuzzy find file then open in nvim
-fe() {
-  fzf -m \
-    --preview='bat --color=always --style=header,grid --line-range :300 {}' \
-    --preview-window='right:60%' \
-    --bind 'enter:become(nvim {+})' \
-    --bind 'ctrl-/:toggle-preview' \
-    --height=80% \
-    --layout=reverse \
-    --border
-}
-
-# fnm
-FNM_PATH="$HOME/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$HOME/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
-
-# Set the location for the Zsh history file
-export HISTFILE=~/.zsh_history
-
-# Set the number of history entries to save
-export HISTSIZE=10000 # Maximum number of commands to remember in memory
-export SAVEHIST=10000 # Maximum number of commands to save to HISTFILE
-
-setopt APPEND_HISTORY # Ensure history is appended rather than overwritten
-setopt SHARE_HISTORY # Share history between all sessions
-setopt INC_APPEND_HISTORY # Save the history after each command
-setopt HIST_IGNORE_DUPS # Ignore duplicate commands in history
-setopt HIST_IGNORE_SPACE # Ignore commands starting with spaces
-
-# Run ls on cd with nice formatting
-cd() {
-  builtin cd "$@" && eza --icons=auto -F 
-}
-
-# Created by `pipx` on 2025-04-21 08:33:34
-export PATH="$PATH:$HOME/.local/bin"
-
-# Task Master aliases added on 4/26/2025
-alias tm='task-master'
-alias taskmaster='task-master'
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-export PATH=$PATH:/opt/flyway
-
-# golang
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -206,5 +144,71 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Use vim instead of vscode to commit
+export EDITOR=vim
+export GIT_EDITOR=vim
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$HOME/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+# Set the location for the Zsh history file
+export HISTFILE=~/.zsh_history
+
+# Set the number of history entries to save
+export HISTSIZE=10000 # Maximum number of commands to remember in memory
+export SAVEHIST=10000 # Maximum number of commands to save to HISTFILE
+
+setopt APPEND_HISTORY # Ensure history is appended rather than overwritten
+setopt SHARE_HISTORY # Share history between all sessions
+setopt INC_APPEND_HISTORY # Save the history after each command
+setopt HIST_IGNORE_DUPS # Ignore duplicate commands in history
+setopt HIST_IGNORE_SPACE # Ignore commands starting with spaces
+
+# Created by `pipx` on 2025-04-21 08:33:34
+export PATH="$PATH:$HOME/.local/bin"
+
+# Task Master aliases added on 4/26/2025
+alias tm='task-master'
+alias taskmaster='task-master'
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH=$PATH:/opt/flyway
+
+# golang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Show all files, in color, excluding node_moodules and .git dirs
+alias treep="tree -a -C -I 'node_modules|.git'"
+
+# Fuzzy find file then open in nvim
+fe() {
+  fzf -m \
+    --preview='bat --color=always --style=header,grid --line-range :300 {}' \
+    --preview-window='right:60%' \
+    --bind 'enter:become(nvim {+})' \
+    --bind 'ctrl-/:toggle-preview' \
+    --height=80% \
+    --layout=reverse \
+    --border
+}
+
+# Run ls on cd with nice formatting
+cd() {
+  builtin cd "$@" && eza --icons=auto -F 
+}
+
 source <(fzf --zsh)
