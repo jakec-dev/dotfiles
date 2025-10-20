@@ -9,7 +9,8 @@
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install tree tldr stow nvim tmux
+sudo apt install tldr stow nvim tmux
+// Install eza
 wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz
 sudo chmod +x eza
 sudo chown root:root eza
@@ -40,6 +41,8 @@ stow .
 ```sh
 git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
+// Install zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 ```
 
 4. Install tmux plugins
