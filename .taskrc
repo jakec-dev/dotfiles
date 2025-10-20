@@ -75,4 +75,3 @@ report.in.description=Inbox
 report.in.filter=status:pending (+inbox)
 report.in.labels=ID,Description
 news.version=3.4.1
-context=work
