@@ -96,6 +96,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   fzf-tab
+  zsh-vi-mode
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -212,3 +213,4 @@ cd() {
 }
 
 source <(fzf --zsh)
+eval "$(zoxide init zsh)"

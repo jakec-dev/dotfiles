@@ -32,5 +32,14 @@
       "filetypes": ["go"]
     }
   },
-  "cSpell.userWords": ["Dotfiles", "Localsearch", "jakec", "nvim", "tldr"]
+  "cSpell.userWords": [
+    "Dotfiles",
+    "Localsearch",
+    "digitalroute",
+    "duda",
+    "jakec",
+    "nodenext",
+    "nvim",
+    "tldr"
+  ]
 }

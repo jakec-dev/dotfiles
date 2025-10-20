@@ -9,7 +9,8 @@
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install tree tldr stow nvim tmux
+sudo apt install tldr stow nvim tmux
+// Install eza
 wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz
 sudo chmod +x eza
 sudo chown root:root eza
@@ -39,6 +40,9 @@ stow .
 4. Setup zsh
 ```sh
 git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
+// Install zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 ```
 
 4. Install tmux plugins
@@ -69,11 +73,11 @@ Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-pret
 ## Vim Cheat Sheet
 | Key      | Action                                           | .   | Key        | Action                                |
 | -        | --                                               | --  | --         | --                                    |
-| .        | .                                                | .   | cs"'       | change double-quotes to single-quotes |
+| J        | join next line to current line                   | .   | cs"'       | change double-quotes to single-quotes |
 | .        | .                                                | .   | ds"        | remove double-quotes                  |
 | .        | .                                                | .   | ysiw"      | surround word with double quotes      |
-| [x       | move to next error                               | .   | ,aw        | open spell checker menu for word      |
-| ]x       | move to previous error                           | .   | ,aap       | open spell checker menu for paragraph |
+| .        | .                                                | .   | ,aw        | open spell checker menu for word      |
+| .        | .                                                | .   | ,aap       | open spell checker menu for paragraph |
 | zz       | center cursor on screen                          | .   | *          | search word under cursor              |
 | zt       | position cursor on top of screen                 | .   | "<number>y | yank to <number> registry             |
 | zb       | position cursor on bottom of screen              | .   | "<number>p | paste <number> registry               |
