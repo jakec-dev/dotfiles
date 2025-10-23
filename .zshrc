@@ -207,10 +207,12 @@ fe() {
     --border
 }
 
+alias cd="z"
+
 # Run ls on cd with nice formatting
-cd() {
-  builtin cd "$@" && eza --icons=auto -F 
-}
+# cd() {
+#   builtin cd "$@" && eza --icons=auto -F 
+# }
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"

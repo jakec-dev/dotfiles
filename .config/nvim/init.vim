@@ -67,6 +67,7 @@ call plug#begin()
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'dimtion/guttermarks.nvim'
   Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-abolish'
 call plug#end()
 
 " Start NERDTree when Vim is started without file arguments.
