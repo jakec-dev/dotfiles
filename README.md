@@ -74,9 +74,9 @@ Run command `:CocInstall coc-tsserver coc-json coc-html coc-css coc-git coc-pret
 | Key      | Action                                           | .   | Key        | Action                                |
 | -        | --                                               | --  | --         | --                                    |
 | J        | join next line to current line                   | .   | cs"'       | change double-quotes to single-quotes |
-| .        | .                                                | .   | ds"        | remove double-quotes                  |
-| .        | .                                                | .   | ysiw"      | surround word with double quotes      |
-| .        | .                                                | .   | ,aw        | open spell checker menu for word      |
+| s        | delete character and insert                      | .   | ds"        | remove double-quotes                  |
+| A        | insert at end of line                            | .   | ysiw"      | surround word with double quotes      |
+|   I      | insert at beginning of line                      | .   | ,aw        | open spell checker menu for word      |
 | .        | .                                                | .   | ,aap       | open spell checker menu for paragraph |
 | zz       | center cursor on screen                          | .   | *          | search word under cursor              |
 | zt       | position cursor on top of screen                 | .   | "<number>y | yank to <number> registry             |
