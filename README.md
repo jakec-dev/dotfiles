@@ -15,6 +15,13 @@ wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64
 sudo chmod +x eza
 sudo chown root:root eza
 sudo mv eza /usr/local/bin/eza
+
+git clone https://github.com/jrmoulton/tmux-sessionizer.git
+cd tmux-sessionizer
+cargo install --path . --force
+cd ..
+rm -rf tmux-sessionizer
+echo "source <(COMPLETE=zsh tms)" >> ~/.zshrc
 ```
 
 **Mac**

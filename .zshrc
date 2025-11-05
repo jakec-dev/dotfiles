@@ -216,3 +216,4 @@ alias cd="z"
 
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
+source <(COMPLETE=zsh tms)

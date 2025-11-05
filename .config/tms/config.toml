@@ -1,0 +1,12 @@
+bookmarks = ["/home/jake/dotfiles"]
+
+[[search_dirs]]
+path = "/home/jake/dev"
+depth = 10
+
+[picker_colors]
+highlight_color = "#393836"
+highlight_text_color = "#C5C9C5"
+border_color = "#625E5A"
+info_color = "#949FB5"
+prompt_color = "#87A987"
