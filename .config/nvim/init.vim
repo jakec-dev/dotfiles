@@ -198,11 +198,24 @@ require('gitsigns').setup{
 
 -- Harpoon setup
 local harpoon = require("harpoon")
-harpoon:setup()
+harpoon:setup({
+  settings = {
+    save_on_toggle = true,
+  },
+})
 
 vim.keymap.set("n", "<leader>m", function() harpoon:list():add() end)
 vim.keymap.set("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
+-- Replace item at specific position with current file
+vim.keymap.set("n", "<leader>s1", function() harpoon:list():replace_at(1) end)
+vim.keymap.set("n", "<leader>s2", function() harpoon:list():replace_at(2) end)
+vim.keymap.set("n", "<leader>s3", function() harpoon:list():replace_at(3) end)
+vim.keymap.set("n", "<leader>s4", function() harpoon:list():replace_at(4) end)
+vim.keymap.set("n", "<leader>s5", function() harpoon:list():replace_at(5) end)
+vim.keymap.set("n", "<leader>s6", function() harpoon:list():replace_at(6) end)
+
+-- Navigate to marked files
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
 vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
@@ -293,7 +306,7 @@ command! -bang -nargs=? -complete=dir Files
 command! -bang -nargs=? -complete=dir AllFiles
     \ call fzf#run(fzf#wrap('allfiles', fzf#vim#with_preview({ 'dir': <q-args>, 'sink': 'e', 'source': 'rg --files --hidden --no-ignore' }), <bang>0))
  
-nmap <leader>f :Files<cr>
+nmap <leader>ff :Files<cr>
 nmap <leader>F :AllFiles<cr>
 nmap <leader>b :Buffers<cr>
 nmap <leader>h :History<cr>
@@ -305,4 +318,4 @@ nmap <leader>gb :GBranches<cr>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-g> :NERDTreeFind<CR>
