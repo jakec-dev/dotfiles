@@ -12,17 +12,18 @@ hi LineNr ctermfg=DarkGrey
  
 filetype plugin indent on
  
+set cursorline
+set list
 set mouse=a
 set showcmd
 set statusline+=%F
-set laststatus=2
+set laststatus=3
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 set ai
 set si
-set wrap
 set wildmenu
 set wildignore=*.docx,*.jpg,*.png,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set lazyredraw
@@ -39,7 +40,7 @@ set termguicolors
 set clipboard=unnamedplus
 set confirm
 vmap <C-c> "+y
- 
+
 nnoremap j gj
 nnoremap k gk
 nnoremap <LeftMouse> ma<LeftMouse>`a
@@ -49,22 +50,22 @@ vnoremap <leader>ct :!column -t -s '\|' -o '\|'<CR>
 
 " Rename tmux window to file name
 nnoremap <leader>tr :echo system('tmux rename-window ' . shellescape(expand('%:t')))<CR>
- 
+
 call plug#begin()
-  Plug 'fatih/vim-go'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-  Plug 'stsewd/fzf-checkout.vim'
-  Plug 'charlespascoe/vim-go-syntax'
-  Plug 'preservim/nerdtree'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'lewis6991/gitsigns.nvim'
-  Plug 'tpope/vim-surround'
-  Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa' }
-  Plug 'MeanderingProgrammer/render-markdown.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'nvim-tree/nvim-web-devicons'
+Plug 'fatih/vim-go'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
+Plug 'charlespascoe/vim-go-syntax'
+Plug 'preservim/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'tpope/vim-surround'
+Plug 'rebelot/kanagawa.nvim', { 'as': 'kanagawa' }
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-tree/nvim-web-devicons'
   Plug 'dimtion/guttermarks.nvim'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-abolish'
@@ -228,7 +229,7 @@ EOF
 colorscheme kanagawa-dragon
 
 set cmdheight=2
-set updatetime=300
+set updatetime=200
 set shortmess+=c
 set signcolumn=yes
  
