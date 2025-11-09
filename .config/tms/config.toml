@@ -1,4 +1,7 @@
-bookmarks = ["/home/jake/dotfiles"]
+bookmarks = [
+    "/home/jake/dotfiles",
+    "/home/jake/vim/Vim-Katas",
+]
 
 [[search_dirs]]
 path = "/home/jake/dev"

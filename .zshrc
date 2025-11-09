@@ -183,6 +183,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# flyway
 export PATH=$PATH:/opt/flyway
 
 # golang
@@ -208,12 +210,8 @@ fe() {
 }
 
 alias cd="z"
-
-# Run ls on cd with nice formatting
-# cd() {
-#   builtin cd "$@" && eza --icons=auto -F 
-# }
+alias ls="eza"
 
 source <(fzf --zsh)
-eval "$(zoxide init zsh)"
 source <(COMPLETE=zsh tms)
+eval "$(zoxide init zsh)"

@@ -9,7 +9,7 @@
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install tldr stow nvim tmux fd-find
+sudo apt install tldr stow nvim tmux fd-find mc
 // Install eza
 wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz
 sudo chmod +x eza
