@@ -99,7 +99,6 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   fzf-tab
-  zsh-vi-mode
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -180,7 +179,7 @@ alias tm='task-master'
 alias taskmaster='task-master'
 
 # pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
+export PNPM_HOME="/home/jake/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -226,3 +225,17 @@ export FZF_DEFAULT_OPTS=" \
 source <(fzf --zsh)
 source <(COMPLETE=zsh tms)
 eval "$(zoxide init zsh)"
+
+# fnm
+FNM_PATH="/home/jake/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# fnm
+FNM_PATH="/home/jake/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
