@@ -5,6 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export EDITOR=nvim
+export VISUAL=nvim
+
+alias vpn="twingate"
+
 # Taskwarrior
 alias tt="$HOME/taskwarrior-tui"
 alias in="task add +inbox"
@@ -211,7 +216,6 @@ fe() {
     --border
 }
 
-alias cd="z"
 alias ls="eza"
 
 # fzf catpuccin theme
@@ -233,9 +237,14 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-# fnm
-FNM_PATH="/home/jake/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
+# call 'fnm use' every time zoxide changes directory
+zz() {
+    # Call the original 'z' command
+    z "$@"
+
+    # If 'z' was successful and we changed directories
+    if [ $? -eq 0 ]; then
+        # Use 'fnm' to look for a '.node-version' file and use it
+        fnm use
+    fi
+}
