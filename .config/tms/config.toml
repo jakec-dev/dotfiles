@@ -1,10 +1,16 @@
 bookmarks = [
     "/home/jake/dotfiles",
     "/home/jake/vim/Vim-Katas",
+    "/home/jake/study/rust",
+    "/home/jake/study/node",
 ]
 
 [[search_dirs]]
 path = "/home/jake/dev"
+depth = 10
+
+[[search_dirs]]
+path = "/home/jake/localsearch"
 depth = 10
 
 [picker_colors]

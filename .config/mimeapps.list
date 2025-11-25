@@ -18,3 +18,4 @@ image/gif=qimgv.desktop
 image/webp=qimgv.desktop
 image/bmp=qimgv.desktop
 image/svg+xml=qimgv.desktop
+x-scheme-handler/bruno=bruno.desktop

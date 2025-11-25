@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export EDITOR=nvim
-export VISUAL=nvim
-
 alias vpn="twingate"
 
 # Taskwarrior
@@ -107,15 +104,25 @@ plugins=(
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=~/.zfunc
 
 zstyle :omz:plugins:ssh-agent agent-forwarding yes
-zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa_personal
+
+# Automatically detect all SSH keys with id_ prefix (excluding .pub files)
+typeset -a ssh_identities
+for key in ~/.ssh/id_*(N); do
+  [[ -f "$key" && ! "$key" =~ \.pub$ ]] && ssh_identities+=(${key:t})
+done
+
+zstyle :omz:plugins:ssh-agent identities "${ssh_identities[@]}"
 zstyle :omz:plugins:ssh-agent quiet yes
-zstyle :omz:plugins:ssh-agent lazy yes
+# zstyle :omz:plugins:ssh-agent lazy yes  # Disabled: prevents auto-loading keys on startup
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 -F --color=always --icons=auto $realpath'
+
+
 
 autoload -U compinit; compinit
 source $ZSH/oh-my-zsh.sh
@@ -153,7 +160,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Use vim instead of vscode to commit
-export EDITOR=vim
+export EDITOR=nvim
 export GIT_EDITOR=vim
 
 # fnm
@@ -201,8 +208,6 @@ export PATH=$PATH:$GOPATH/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Show all files, in color, excluding node_moodules and .git dirs
-alias treep="tree -a -C -I 'node_modules|.git'"
 
 # Fuzzy find file then open in nvim
 fe() {
@@ -247,4 +252,10 @@ zz() {
         # Use 'fnm' to look for a '.node-version' file and use it
         fnm use
     fi
+}
+
+# git push new branch with upstream
+gpn() {
+    local branch=$(git rev-parse --abbrev-ref HEAD)
+    git push -u origin "$branch"
 }
