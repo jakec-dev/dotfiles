@@ -191,7 +191,7 @@ alias tm='task-master'
 alias taskmaster='task-master'
 
 # pnpm
-export PNPM_HOME="/home/jake/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -205,6 +205,9 @@ export PATH=$PATH:/opt/flyway
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# nvim mason (for nvim-dap adapters etc)
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -236,7 +239,7 @@ source <(COMPLETE=zsh tms)
 eval "$(zoxide init zsh)"
 
 # fnm
-FNM_PATH="/home/jake/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
