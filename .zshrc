@@ -225,6 +225,7 @@ fe() {
 }
 
 alias ls="eza"
+alias cd="zz"
 
 # fzf catpuccin theme
 export FZF_DEFAULT_OPTS=" \
@@ -245,14 +246,11 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-# call 'fnm use' every time zoxide changes directory
+# call 'fnm use' when zoxide changes to a directory with a node version file
 zz() {
-    # Call the original 'z' command
     z "$@"
 
-    # If 'z' was successful and we changed directories
-    if [ $? -eq 0 ]; then
-        # Use 'fnm' to look for a '.node-version' file and use it
+    if [[ $? -eq 0 && ( -f .nvmrc || -f .node-version ) ]]; then
         fnm use
     fi
 }

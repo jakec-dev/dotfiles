@@ -1,0 +1,11 @@
+Config(
+  prefix: ":sym ",
+  symbols: {
+    "shrug": "¯\\_(ツ)_/¯",
+    "tableflip": "(╯°□°)╯︵ ┻━┻",
+    "unflip": "┬─┬ノ( º _ ºノ)",
+    "lenny": "( ͡° ͜ʖ ͡°)",
+    "disapproval": "ಠ_ಠ",
+  },
+  max_entries: 10,
+)
