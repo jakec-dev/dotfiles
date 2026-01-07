@@ -1,0 +1,40 @@
+Config(
+  // Centered horizontally, near top of screen
+  x: Fraction(0.5),
+  y: Absolute(200),
+
+  width: Absolute(600),
+  height: Absolute(1),
+
+  // Visual settings
+  hide_icons: false,
+  hide_plugin_info: true,
+  ignore_exclusive_zones: false,
+  layer: Overlay,
+  close_on_click: true,
+  show_results_immediately: false,
+  max_entries: Some(10),
+
+  // Plugins loaded from /usr/lib/anyrun/
+  // Order determines priority in results
+  plugins: [
+    "/usr/lib/anyrun/libapplications.so",  // App launcher
+    "/usr/lib/anyrun/librink.so",          // Calculator + unit conversion
+    "/usr/lib/anyrun/libshell.so",         // Shell commands (prefix: >)
+    "/usr/lib/anyrun/libwebsearch.so",     // Web search (prefix: ?)
+    "/usr/lib/anyrun/libsymbols.so",       // Unicode symbols (prefix: :)
+    "/usr/lib/anyrun/librandr.so",         // Monitor config (prefix: :dp)
+    "/usr/lib/anyrun/libdictionary.so",    // Dictionary (prefix: define:)
+  ],
+
+  keybinds: [
+    Keybind(key: "Return", action: Select),
+    Keybind(key: "Up", action: Up),
+    Keybind(key: "k", ctrl: true, action: Up),
+    Keybind(key: "Down", action: Down),
+    Keybind(key: "j", ctrl: true, action: Down),
+    Keybind(key: "Tab", action: Down),
+    Keybind(key: "ISO_Left_Tab", action: Up, shift: true),
+    Keybind(key: "Escape", action: Close),
+  ],
+)
