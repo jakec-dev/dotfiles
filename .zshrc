@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 alias vpn="twingate"
+alias dbpp="aws rds generate-db-auth-token --hostname proxy-rds-private-core-mysql.proxy-ctjubphreqqd.ap-southeast-2.rds.amazonaws.com --port 3306 --region ap-southeast-2 --username"
 
 # Taskwarrior
 alias tt="$HOME/taskwarrior-tui"
@@ -239,6 +240,9 @@ source <(fzf --zsh)
 source <(COMPLETE=zsh tms)
 eval "$(zoxide init zsh)"
 
+# add GITLAB_TOKEN to env vars for Claude auto updating of private marketplace
+export GITLAB_TOKEN=$(grep "^//gitlab.com/api/v4/packages/npm/:_authToken=" ~/.npmrc | sed "s/.*=//")
+
 # fnm
 FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
@@ -260,3 +264,6 @@ gpn() {
     local branch=$(git rev-parse --abbrev-ref HEAD)
     git push -u origin "$branch"
 }
+
+# opencode
+export PATH=/Users/jake.clayton/.opencode/bin:$PATH
